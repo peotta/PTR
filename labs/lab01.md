@@ -38,9 +38,7 @@ flowchart
 - Escolha usar um router ou SW L3
 
 - 1 roteador (FRRouting ou Cisco IOU ou  VyOS)
-
-- 1 switch Layer 2
-    
+  
 - 2 hosts Linux
     
 - 2 segmentos Ethernet
