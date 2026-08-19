@@ -176,6 +176,7 @@ exit
 ```bash
 interface g0/0
 description LAN-PNETLAB
+no switchport
 ip address 192.168.0.254 255.255.255.0
 no shutdown
 exit
