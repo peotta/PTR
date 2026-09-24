@@ -1,8 +1,7 @@
-# Laboratório  10B - Firewall Stateful com `iptables`
+# Laboratório 10B - Firewall Stateful com `iptables`
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
-**Monitores:** Victor Lima dos Santos / Beatriz Silva Nascimento  
 
 ---
 
@@ -372,5 +371,10 @@ Ao final deste Laboratório, o aluno deve perceber que:
 - um firewall stateful acompanha o estado das conexões;
 - o `iptables`, com `conntrack`, permite liberar respostas automaticamente;
 - o modelo stateful reduz a necessidade de regras duplicadas de retorno;
-- a comparação prática com o Laboratório  10 torna mais visível a diferença entre os dois modelos;
-- o firewall stateful representa uma evolução natural em relação ao firewall de pacotes estudado no Laboratório  10.
+- a comparação prática com o Laboratório 10 torna mais visível a diferença entre os dois modelos;
+- o firewall stateful representa uma evolução natural em relação ao firewall de pacotes estudado no Laboratório 10.
+
+---
+
+[← Anterior: Laboratório 10](lab10.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 11A →](lab11A.md)
+

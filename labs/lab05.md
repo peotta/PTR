@@ -2,7 +2,6 @@
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
-**Monitores:** 
 
 ---
 <h2>Podcast desta Aula</h2>
@@ -685,3 +684,8 @@ show ip ospf neighbor
 - LOBATO, Luiz Carlos. *Protocolos de Roteamento IP*. Rio de Janeiro: RNP/ESR, 2013.
 - KUROSE, James F.; ROSS, Keith W. *Redes de Computadores e a Internet: uma abordagem top-down*. 8. ed. Porto Alegre: Pearson/Bookman, 2021.
 - MORAES, Alexandre Fernandes de. *Wireshark: Guia Prático de Análise de Tráfego de Rede*. São Paulo: Novatec, 2015.
+
+---
+
+[← Anterior: Laboratório 04](lab04.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 06 →](lab06.md)
+

@@ -1,4 +1,4 @@
-# Lab 11B - Testes de Ataques Web e Análise de Logs no WAF
+# Laboratório 11B - Testes de Ataques Web e Análise de Logs no WAF
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
@@ -394,4 +394,6 @@ Ao final deste laboratório, o estudante deve concluir que:
 - o **Lab 11B** torna visível, de forma prática, a diferença entre **permitir a conexão** e **permitir a requisição**.
 
 ---
+
+[← Anterior: Laboratório 11A](lab11A.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 12 →](lab12.md)
 

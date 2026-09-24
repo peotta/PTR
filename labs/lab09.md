@@ -1,8 +1,7 @@
-# Lab 09 - Implementação de MPLS no Backbone
+# Laboratório 09 - Implementação de MPLS no Backbone
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
-**Monitores:** Victor Lima dos Santos / Beatriz Silva Nascimento
 
 **Observação:** Este laboratório é continuação do **Laboratório 08**
 
@@ -501,3 +500,8 @@ Ao final deste laboratório, o estudante deve perceber que:
 - o **OSPF** organiza a alcançabilidade interna do backbone;
 - o **MPLS** permite transportar o tráfego por meio de rótulos;
 - a nuvem da operadora possui lógica própria, diferente da rede do cliente;
+
+---
+
+[← Anterior: Laboratório 08](lab08.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 10 →](lab10.md)
+

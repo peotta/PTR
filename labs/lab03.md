@@ -2,7 +2,6 @@
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
-**Monitores:** Victor Lima dos Santos / Beatriz Silva Nascimento
 
 ---
 
@@ -341,3 +340,8 @@ Nem toda imagem de roteador Cisco disponível no PNetLab suporta multicast/PIM i
 ## 16. Conclusão
 
 Esta atividade apresenta o primeiro cenário prático de multicast IP com PIM-DM em ambiente controlado no PNetLab. O laboratório permite que o aluno compreenda como o roteador passa a tratar tráfego multicast, formando a base conceitual e operacional necessária para topologias mais complexas nas próximas práticas.
+
+---
+
+[← Anterior: Laboratório 02](lab02.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 04 →](lab04.md)
+

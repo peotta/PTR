@@ -1,8 +1,7 @@
 # Laboratório 01 - Configuração inicial no PNetLab
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
-**Professor responsável:** **Prof. Dr. Laerte Peotta de Melo**  
-**Monitores:** Victor Lima dos Santos / Beatriz Silva Nascimento
+**Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
 
 ---
 
@@ -91,17 +90,28 @@ flowchart
 
 **Host A**
 
-`ip addr add 192.168.10.10/24 dev eth0 ip link set eth0 up`
+```bash
+ip addr add 192.168.10.10/24 dev eth0
+ip link set eth0 up
+```
 
 **Host B**
 
-`ip addr add 192.168.20.10/24 dev eth0 ip link set eth0 up`
+```bash
+ip addr add 192.168.20.10/24 dev eth0
+ip link set eth0 up
+```
 
 ---
 
 ### Passo 4 – Configurar o roteador
 
-`ip addr add 192.168.10.1/24 dev eth0 ip addr add 192.168.20.1/24 dev eth1 ip link set eth0 up ip link set eth1 up`
+```bash
+ip addr add 192.168.10.1/24 dev eth0
+ip addr add 192.168.20.1/24 dev eth1
+ip link set eth0 up
+ip link set eth1 up
+```
 
 ---
 
@@ -211,3 +221,5 @@ O aluno deverá enviar relatório em **PDF** pelo ambiente Teams disponibilizado
 > O aluno deve seguir rigorosamente os **roteiros** utilizando o modelo de [**relatório**](https://github.com/ProfessorLaerte/labredes/blob/main/labs/relatorio.md) e registrar os resultados conforme solicitado.
 
 ---
+
+[Índice Geral (README)](../README.md) | [Próximo: Laboratório 02 →](lab02.md)

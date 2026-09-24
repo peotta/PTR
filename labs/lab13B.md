@@ -1,8 +1,7 @@
-# Lab 13B - Segurança no DHCP: Servidor Falso, Análise e Mitigação
+# Laboratório 13B - Segurança no DHCP: Servidor Falso, Análise e Mitigação
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
-**Professor:** Prof. Dr. Laerte Peotta de Melo  
 **Tema:** Segurança no DHCP  
 **Continuação do: Lab 13 - Configuração e Análise do Protocolo DHCP**
 
@@ -710,3 +709,8 @@ A prática demonstrou que, embora o DHCP simplifique a configuração de cliente
 A presença de um servidor DHCP não autorizado pode causar entrega de gateway incorreto, DNS indevido, conflitos de configuração e indisponibilidade. A principal defesa em redes com switches gerenciáveis é o uso de **DHCP Snooping**, combinado com segmentação por VLANs, monitoramento de logs e controle das portas de acesso.
 
 O Lab 13B complementa o Lab 13 ao mostrar que configurar um protocolo não é suficiente: é necessário também compreender seus riscos, formas de diagnóstico e mecanismos de proteção.
+
+---
+
+[← Anterior: Laboratório 13](lab13.md) | [Índice Geral (README)](../README.md)
+

@@ -1,12 +1,27 @@
-Disciplina: **ENE0025 - PTR - Protocolos de Transporte e Roteamento** 
+# ENE0025 - Protocolos de Transporte e Roteamento (PTR)
 
-Curso: **Engenharia de Redes de Comunicação**  
-Instituição: **Universidade de Brasília (UnB)**  
-Departamento: **Engenharia Elétrica** 
+- **Curso:** Engenharia de Redes de Comunicação  
+- **Instituição:** Universidade de Brasília (UnB)  
+- **Departamento:** Departamento de Engenharia Elétrica (ENE)  
+- **Professor Responsável:** Prof. Dr. Laerte Peotta de Melo  
 
-**Professor Responsável:** Prof. Dr. Laerte Peotta de Melo
+---
 
-**Monitores:** Victor Lima dos Santos / Beatriz Silva Nascimento / Luan Silva Moura
+## Equipe de Monitoria
+
+### Monitores Atuais (2026/02)
+
+- Ana Cecília Braga
+- Caio Lucas Pereira Mena Barreto
+- Caio Soares Rodrigues
+- Luidi Rafael da Silva Fernandes
+
+### Monitores Anteriores (2026/01)
+
+- Beatriz Silva Nascimento
+- Gabriel Henrique da Cruz Costa
+- Luan Silva Moura
+- Luidi Rafael da Silva Fernandes
 
 ---
 
@@ -149,28 +164,61 @@ Os critérios específicos de cada experimento serão informados no respectivo r
 
 ## Laboratórios
 
-## Laboratórios
+Os laboratórios práticos estão organizados de acordo com a progressão temática do curso:
 
-| Laboratório | Tema | Link |
-|:------------:|------|------|
-| 00 | Comandos Linux e VPCS no PNetLab | [Acessar](./labs/comandos.md) |
-| 01 | Configuração inicial no PNetLab | [Acessar](./labs/lab01.md) |
-| 02 | Configuração básica de roteadores no PNetLab | [Acessar](./labs/lab02.md) |
-| 03 | PIM-DM em topologia controlada | [Acessar](./labs/lab03.md) |
-| 04 | RIP e análise de convergência | [Acessar](./labs/lab04.md) |
-| 05 | Roteamento Dinâmico com RIP e OSPF | [Acessar](./labs/lab05.md) |
-| 06 | Roteamento Externo via BGP | [Acessar](./labs/lab06.md) |
-| 07 | Configuração dos Provedores (BGP Externo) | [Acessar](./labs/lab07.md) |
-| 08 | Políticas BGP e integração com OSPF | [Acessar](./labs/lab08.md) |
-| 09 | Implementação de MPLS no Backbone | [Acessar](./labs/lab09.md) |
-| 10 | Firewall de Pacotes com `iptables` | [Acessar](./labs/lab10.md) |
-| 10B | Firewall Stateful com `iptables` | [Acessar](./labs/lab10B.md) |
+### Módulo 0: Fundamentos e Ambiente PNetLab
+| Laboratório | Tema | Roteiro |
+|:------------:|------|:-------:|
+| **00** | Guia de Comandos Básicos (VPCS e Linux) | [Acessar](./labs/comandos.md) |
+| **01** | Configuração Inicial e Fundamentos de Roteamento IP | [Acessar](./labs/lab01.md) |
+| **02** | Configuração Básica de Roteadores no PNetLab | [Acessar](./labs/lab02.md) |
 
+### Módulo 1: Roteamento Intra-Domínio (IGP) e Multicast
+| Laboratório | Tema | Roteiro |
+|:------------:|------|:-------:|
+| **03** | Roteamento Multicast: PIM-DM em Topologia Controlada | [Acessar](./labs/lab03.md) |
+| **04** | Roteamento com RIPv2 e Análise de Convergência | [Acessar](./labs/lab04.md) |
+| **05** | Roteamento Dinâmico com OSPF | [Acessar](./labs/lab05.md) |
 
+### Módulo 2: Roteamento Inter-Domínio (EGP / BGP)
+| Laboratório | Tema | Roteiro |
+|:------------:|------|:-------:|
+| **06** | Roteamento Externo via BGP (eBGP Básico) | [Acessar](./labs/lab06.md) |
+| **07** | Configuração dos Provedores (BGP Externo e Peering) | [Acessar](./labs/lab07.md) |
+| **08** | Políticas de Roteamento BGP e Integração com OSPF | [Acessar](./labs/lab08.md) |
 
+### Módulo 3: Comutação por Rótulos (MPLS)
+| Laboratório | Tema | Roteiro |
+|:------------:|------|:-------:|
+| **09** | Implementação de MPLS e LDP no Backbone | [Acessar](./labs/lab09.md) |
 
+### Módulo 4: Serviços de Rede e Infraestrutura
+| Laboratório | Tema | Roteiro |
+|:------------:|------|:-------:|
+| **13** | Configuração e Análise do Protocolo DHCP | [Acessar](./labs/lab13.md) |
+| **13B** | Segurança em DHCP: Rogue Server, Análise e Mitigação (DHCP Snooping) | [Acessar](./labs/lab13B.md) |
 
+### Módulo 5: Segurança de Redes e Aplicação
+| Laboratório | Tema | Roteiro |
+|:------------:|------|:-------:|
+| **10** | Firewall de Pacotes Stateless com `iptables` | [Acessar](./labs/lab10.md) |
+| **10B** | Firewall Stateful com `iptables` e Conntrack | [Acessar](./labs/lab10B.md) |
+| **11A** | Implementação de WAF com ModSecurity e OWASP CRS | [Acessar](./labs/lab11A.md) |
+| **11B** | Testes de Ataques Web e Análise de Logs no WAF | [Acessar](./labs/lab11B.md) |
+| **12** | Implementação de IDS/IPS com Suricata no PNetLab | [Acessar](./labs/lab12.md) |
 
-> Este repositório é de uso acadêmico e destina-se exclusivamente às atividades disciplina.
+---
+
+## Guias e Materiais Complementares
+
+| Documento | Descrição | Link |
+|-----------|-----------|:----:|
+| **Comandos de Rede** | Tabela rápida de comandos para VPCS e distribuições Debian/Ubuntu | [Acessar](./labs/comandos.md) |
+| **Ambiente Móvel & Auditoria** | Guia de instalação LineageOS + Magisk + Kali NetHunter (Xiaomi Pyxis) | [Acessar](./labs/linux-mobile.md) |
+
+---
+
+> Este repositório é de uso acadêmico e destina-se exclusivamente às atividades da disciplina.
+
 
 

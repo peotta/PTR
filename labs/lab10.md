@@ -1,8 +1,7 @@
-# Lab 10 - Firewall de Pacotes com `iptables`
+# Laboratório 10 - Firewall de Pacotes com `iptables`
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
-**Monitores:** Victor Lima dos Santos / Beatriz Silva Nascimento  
 
 ---
 
@@ -637,3 +636,8 @@ Ao final deste laboratório, o estudante deve perceber que:
 - a política padrão de bloqueio ajuda a tornar o controle mais seguro;
 - o uso de **Ubuntu Server** ou **Alpine Linux** nos hosts amplia as possibilidades de teste em comparação com VPCs simples;
 - o firewall de pacotes analisa cada pacote de forma isolada, o que prepara o caminho para a comparação futura com um **firewall stateful**.
+
+---
+
+[← Anterior: Laboratório 09](lab09.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 10B →](lab10B.md)
+

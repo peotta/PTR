@@ -1,4 +1,11 @@
-## Tabela de comandos do VPCS no PNetLab
+# Guia Rápido de Comandos: VPCS e Linux (Debian/Ubuntu)
+
+**Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
+**Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
+
+---
+
+## 1. Tabela de comandos do VPCS no PNetLab
 
 | Comando | O que faz | Exemplo |
 |---|---|---|
@@ -350,4 +357,9 @@ cat /etc/resolv.conf
 ## Conclusão
 
 Netplan simplifica a administração de rede em sistemas Debian/Ubuntu ao concentrar a configuração em arquivos YAML claros e organizados. Seu uso é especialmente útil em laboratórios, servidores e ambientes didáticos, pois permite configurar DHCP, IP estático, DNS e rotas de maneira padronizada e reproduzível.
+
+---
+
+[Índice Geral (README)](../README.md) | [Laboratório 01 →](lab01.md)
+
 

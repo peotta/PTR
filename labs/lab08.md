@@ -1,8 +1,7 @@
-# Lab 08 - Políticas BGP e integração com OSPF
+# Laboratório 08 - Políticas BGP e integração com OSPF
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
-**Monitores:** Victor Lima dos Santos / Beatriz Silva Nascimento
 
 **Observação:** Este laboratório é continuação do **Laboratório 07**
 
@@ -386,3 +385,8 @@ Ao concluir este laboratório, o estudante deve perceber que:
 - A integração entre ambos deve ser seletiva
 - Políticas BGP permitem controlar a saída da rede
 - Redundância com múltiplos provedores aumenta a resiliência do ambiente
+
+---
+
+[← Anterior: Laboratório 07](lab07.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 09 →](lab09.md)
+

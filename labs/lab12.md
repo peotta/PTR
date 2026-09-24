@@ -1,4 +1,4 @@
-# Lab 12 - Implementação de IDS/IPS com Suricata no PNetLab
+# Laboratório 12 - Implementação de IDS/IPS com Suricata no PNetLab
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
@@ -491,3 +491,8 @@ Ao final deste laboratório, o estudante deve perceber que:
 - a análise de logs é parte essencial da operação de segurança;
 - firewall, WAF e IDS/IPS não competem entre si, mas se complementam;
 - a segurança em redes modernas exige múltiplas camadas de proteção e observabilidade.
+
+---
+
+[← Anterior: Laboratório 11B](lab11B.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 13 →](lab13.md)
+

@@ -1,4 +1,4 @@
-# Lab 13 - Configuração e Análise do Protocolo DHCP
+# Laboratório 13 - Configuração e Análise do Protocolo DHCP
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
@@ -581,3 +581,8 @@ A rede utilizada foi `192.168.0.0/24`, com o servidor DHCP no endereço `192.168
 A prática permitiu observar que o DHCP reduz o esforço de configuração manual, evita erros operacionais e centraliza a administração dos parâmetros básicos de rede.
 
 Além da configuração, a análise com `tcpdump`, logs do sistema e arquivo de concessões permitiu compreender o funcionamento real do protocolo DHCP em uma rede local.
+
+---
+
+[← Anterior: Laboratório 12](lab12.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 13B →](lab13B.md)
+

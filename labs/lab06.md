@@ -2,7 +2,6 @@
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
-**Monitores:** Victor Lima dos Santos / Beatriz Silva Nascimento
 
 ---
 
@@ -400,4 +399,9 @@ Durante a verificação, o aluno deve observar:
 - BRITO, Samuel Henrique Bucke. *Laboratórios de Tecnologias Cisco em Infraestrutura de Redes*. 2. ed. São Paulo: Novatec, 2014.
 - LOBATO, Luiz Carlos. *Protocolos de Roteamento IP*. Rio de Janeiro: RNP/ESR, 2013.
 - KUROSE, James F.; ROSS, Keith W. *Redes de Computadores e a Internet: uma abordagem top-down*. 8. ed. Porto Alegre: Pearson/Bookman, 2021.
+
+---
+
+[← Anterior: Laboratório 05](lab05.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 07 →](lab07.md)
+
 

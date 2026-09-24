@@ -1,8 +1,7 @@
-# Lab 11A - Implementação de WAF com ModSecurity e OWASP CRS 
+# Laboratório 11A - Implementação de WAF com ModSecurity e OWASP CRS
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
 **Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
-**Monitores:** Victor Lima dos Santos / Beatriz Silva Nascimento  
 **Tema:** Proteção de aplicações web com Web Application Firewall  
 
 ---
@@ -605,5 +604,5 @@ Ao final deste laboratório, o estudante deve perceber que:
 
 ---
 
-  - path traversal;
-  - manipulação suspeita de parâmetros.
+[← Anterior: Laboratório 10B](lab10B.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 11B →](lab11B.md)
+

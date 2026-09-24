@@ -1,9 +1,7 @@
 # Laboratório 02 - Configuração básica de roteadores no PNetLab
 
 **Disciplina:** ENE0025 - Protocolos de Transporte e Roteamento  
-**Professor responsável:** **Prof. Dr. Laerte Peotta de Melo**  
-
-**Monitores:** Victor Lima dos Santos / Beatriz Silva Nascimento
+**Professor responsável:** Prof. Dr. Laerte Peotta de Melo  
 
 ---
 
@@ -221,13 +219,12 @@ ping 192.168.0.254
 ping 192.168.0.2
 ```
 
-### 9.2 No PC2
+### 9.3 No PC2
 
 ```bash
 ping 192.168.0.254
 ping 192.168.0.1
 ```
-
 
 ---
 
@@ -252,7 +249,7 @@ Ao final da montagem, o laboratório deverá permitir:
 
 ---
 
-## 13. Entrega
+## 12. Entrega
 
 O aluno deverá entregar:
 
@@ -266,6 +263,11 @@ O aluno deverá entregar:
 
 ---
 
-## 15. Conclusão
+## 13. Conclusão
 
 Este laboratório introduz a configuração básica de roteadores no PNetLab e estabelece as competências mínimas necessárias para os próximos cenários da disciplina. Dominar CLI, interface IP, acesso remoto e testes de conectividade é essencial antes da evolução para protocolos de roteamento e atividades de diagnóstico mais avançadas.
+
+---
+
+[← Anterior: Laboratório 01](lab01.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 03 →](lab03.md)
+

@@ -1,6 +1,8 @@
 # Instalação Completa: LineageOS + Magisk + Kali NetHunter no Xiaomi Mi 9 Lite (pyxis)
 
-# Compatibilidade com Outros Aparelhos
+---
+
+## 1. Compatibilidade com Outros Aparelhos
 
 Embora este guia tenha sido elaborado utilizando um Xiaomi Mi 9 Lite (Pyxis), os procedimentos apresentados podem ser adaptados para outros smartphones Android compatíveis com LineageOS, Magisk e Kali NetHunter.
 
@@ -650,3 +652,8 @@ apt install hashcat
 apt install wireshark
 apt install tcpdump
 ```
+
+---
+
+[Índice Geral (README)](../README.md)
+
