@@ -44,7 +44,9 @@ Ao final deste laboratório, o estudante deverá ser capaz de:
 - configurar o BGP em um roteador de borda corporativo;
 - anunciar um prefixo público usando o comando `network`;
 - entender o uso de **loopback**, `update-source` e `ebgp-multihop`;
-- verificar a tabela de rotas e a tabela BGP.
+- verificar a tabela de rotas e a tabela BGP;
+- capturar e dissecar mensagens do protocolo BGP (OPEN, KEEPALIVE e UPDATE) com o Wireshark;
+- verificar o funcionamento prático da opção TCP MD5 Signature e do parâmetro TTL no eBGP multihop.
 
 ---
 
@@ -194,7 +196,7 @@ flowchart LR
 
     %% ===== Links =====
     R1 ---|10.1.0.0 /30| ISP1
-    R1 ---|10.1.0.4 /30| ISP1 
+    R1 ---|10.1.0.4 /30| ISP1
     R1 ---|10.2.0.0 /30| ISP2
     ISP1 ---|191.1.0.0 /30| ISP3
     ISP2 ---|191.2.0.0 /30| ISP3
@@ -344,19 +346,77 @@ Router# show run
 
 ---
 
-## 10. O que o aluno deve observar
+## 10. Captura e Análise de Tráfego com Wireshark
 
-Durante a verificação, o aluno deve observar:
+O BGP opera sobre uma conexão **TCP confiável na porta 179**. Nesta etapa, o aluno deverá capturar a troca de mensagens entre o roteador corporativo (**R1**) e os provedores para analisar o estabelecimento da sessão e a propagação de rotas.
 
-- se as vizinhanças BGP foram estabelecidas;
-- se o prefixo **`200.18.245.64/27`** aparece sendo anunciado;
-- se a tabela BGP mostra rotas aprendidas dos provedores;
-- se a tabela de rotas contém a rota estática para `10.10.10.10/32`;
-- se a rota para `200.18.245.64/27` foi criada com `Null0` para permitir o anúncio do prefixo sumarizado.
+### 10.1 Procedimento de Captura no PNetLab
+
+1. No ambiente do **PNetLab**, clique com o botão direito sobre o enlace entre **R1** e **ISP1** (interface `g0/1`) ou entre **R1** e **ISP2** (interface `g0/3`).
+2. Selecione **Capture** $\rightarrow$ selecione a interface correspondente para iniciar o Wireshark.
+3. No campo de filtro de exibição (*display filter*) do Wireshark, utilize:
+   ```text
+   bgp || tcp.port == 179
+   ```
+4. Para forçar a renegociação da sessão e a reemissão dos anúncios sem alterar as configurações, execute em **R1**:
+   ```bash
+   R1# clear ip bgp *
+   ```
+   > **Nota:** Para forçar apenas o reenvio das mensagens de anúncio (UPDATE) sem derrubar a conexão TCP subjacente, utilize o comando de *soft reset*: `clear ip bgp * soft`.
 
 ---
 
-## 11. Questões para análise
+### 10.2 Mensagens BGP a Identificar e Analisar
+
+O aluno deverá localizar no Wireshark os seguintes tipos de pacotes definidos na RFC 4271:
+
+#### 1. Handshake TCP de Transporte (Porta 179)
+- Identificar os pacotes `SYN`, `SYN-ACK` e `ACK` que inicializam o canal confiável.
+- Observar a presença da opção **TCP Option (19) - TCP MD5 Signature** no cabeçalho TCP, resultante da configuração do comando `neighbor ... password SENHA`.
+
+#### 2. Mensagem BGP OPEN
+- Inspecionada imediatamente após a conclusão do *handshake* TCP.
+- **Campos a analisar:**
+  - `Version`: versão do BGP (deve ser 4);
+  - `My Autonomous System`: número do AS local (AS 1000 para R1; AS 100 para ISP1; AS 200 para ISP2);
+  - `Hold Time`: tempo de retenção proposto (padrão de 180 segundos);
+  - `BGP Identifier`: endereço IP do Router-ID do emissor;
+  - `Optional Parameters`: capacidades negociadas (e.g., suporte a MP-BGP e AS de 4 bytes).
+
+#### 3. Mensagem BGP KEEPALIVE
+- Pacote periódico simples (composto apenas pelo cabeçalho padrão de 19 bytes do BGP).
+- Observar que ele é trocado a cada $\frac{1}{3}$ do *Hold Time* (tipicamente a cada 60 segundos) para manter o estado da adjacência como `Established`.
+
+#### 4. Mensagem BGP UPDATE
+- Mensagem responsável por divulgar ou retirar rotas.
+- **Campos a analisar:**
+  - `Network Layer Reachability Information (NLRI)`: verificar o prefixo público anunciado pela empresa (**`200.18.245.64/27`**);
+  - `Path Attributes`:
+    - **ORIGIN:** deve indicar `IGP` (código 0), gerado pelo comando `network`;
+    - **AS_PATH:** deve conter a sequência de ASs percorridos;
+    - **NEXT_HOP:** endereço do próximo salto para o prefixo anunciado.
+
+#### 5. Inspeção do TTL no Cabeçalho IP (eBGP Multihop)
+- Comparar o campo **Time to Live (TTL)** nos pacotes IP entre os dois enlaces:
+  - Na sessão com o **ISP2** (enlace direto): o TTL é enviado com valor **1** (padrão de sessões eBGP);
+  - Na sessão com o **ISP1** (via Loopback com `ebgp-multihop 2`): o TTL é enviado com valor **2**, permitindo que o pacote atravesse o roteador intermediário até atingir a interface de loopback `10.10.10.10/32`.
+
+---
+
+## 11. O que o aluno deve observar
+
+Durante a verificação e a análise de pacotes, o aluno deve observar:
+
+- se as vizinhanças BGP foram estabelecidas (estado `Established`);
+- se o prefixo **`200.18.245.64/27`** aparece sendo anunciado na tabela BGP e nos pacotes UPDATE capturados;
+- se a tabela BGP mostra rotas aprendidas dos provedores;
+- se a tabela de rotas contém a rota estática para `10.10.10.10/32`;
+- se a rota para `200.18.245.64/27` foi criada com `Null0` para permitir o anúncio do prefixo sumarizado;
+- a sequência temporal da captura: Handshake TCP $\rightarrow$ Mensagens OPEN $\rightarrow$ KEEPALIVE $\rightarrow$ UPDATE.
+
+---
+
+## 12. Questões para análise
 
 1. Qual é a função do BGP nesse cenário?
 2. Por que a sessão com o ISP1 usa endereço de loopback?
@@ -364,33 +424,38 @@ Durante a verificação, o aluno deve observar:
 4. Qual a função do `update-source Loopback1`?
 5. Por que foi criada a rota `ip route 200.18.245.64 255.255.255.224 Null0`?
 6. Qual a diferença entre o pareamento com o ISP1 e com o ISP2?
+7. Com base na captura do Wireshark, qual o papel da mensagem OPEN e quais parâmetros principais são negociados nela antes do envio de rotas?
+8. Explique por que os pacotes BGP destinados ao ISP1 apresentam TTL igual a 2, enquanto os pacotes destinados ao ISP2 utilizam TTL igual a 1.
 
 ---
 
-## 12. Critérios de avaliação
+## 13. Critérios de avaliação
 
 | Critério | Pontos |
 |---|---:|
-| Configuração correta das interfaces | 2,0 |
-| Configuração correta do BGP | 3,0 |
-| Entendimento da vizinhança por loopback | 2,0 |
-| Verificação com comandos de análise | 1,5 |
-| Respostas técnicas das questões | 1,5 |
+| Configuração correta das interfaces e rotas | 2,0 |
+| Configuração correta do BGP e vizinhanças | 2,5 |
+| Entendimento da vizinhança por loopback e multihop | 1,5 |
+| Captura e análise dos pacotes BGP no Wireshark | 2,0 |
+| Verificação com comandos CLI e respostas técnicas | 2,0 |
 
 **Total: 10,0**
 
 ---
 
-## 13. Entregáveis
+## 14. Entregáveis
 
 - print da topologia no emulador;
 - print do `show ip bgp summary`;
 - print do `show ip bgp`;
 - print do `show ip route`;
+- arquivo de captura do Wireshark (`.pcapng`) contendo o estabelecimento da sessão BGP;
+- print do pacote BGP OPEN destacando os campos `My AS` e `BGP Identifier`;
+- print do pacote BGP UPDATE destacando o prefixo anunciado no campo NLRI e seus atributos;
 - relatório curto com:
   - objetivo;
   - comandos executados;
-  - explicação da sessão com loopback;
+  - explicação da sessão com loopback e análise de TTL;
   - conclusão.
 
 ---
