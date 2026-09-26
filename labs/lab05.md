@@ -176,7 +176,7 @@ flowchart LR
 
 ## 5. Plano de endereçamento
 
-## Tipos de interfaces
+### Tipos de interfaces
 
 - **`f` = FastEthernet**  
   Interface Ethernet de menor velocidade, muito comum em laboratórios e em equipamentos mais antigos.  
@@ -504,7 +504,7 @@ ospf.msg == 5   # Link State Acknowledgment (LSAck)
 
 ## 12. Aprofundando o OSPF
 
-### 11.1 Router ID
+### 12.1 Router ID
 
 Verificar o Router ID escolhido automaticamente por cada roteador:
 
@@ -515,7 +515,7 @@ show ip protocols
 
 O Router ID é escolhido, por padrão, a partir do maior endereço IP entre as interfaces de loopback ativas ou, na ausência delas, entre as interfaces físicas ativas. Em ambientes de produção, é comum fixá-lo manualmente com uma interface de loopback dedicada, para evitar que ele mude após uma reinicialização de interface.
 
-### 11.2 Custo (cost) da rota OSPF
+### 12.2 Custo (cost) da rota OSPF
 
 O custo de cada interface é calculado por padrão como `100.000.000 / largura de banda (bps)`. Verificar o custo configurado em cada interface:
 
@@ -524,7 +524,7 @@ show ip ospf interface g0/0
 show ip ospf interface f0/0
 ```
 
-### 11.3 Tipos de vizinhança e estados
+### 12.3 Tipos de vizinhança e estados
 
 Observar a progressão dos estados de vizinhança OSPF durante a formação da adjacência (`Down → Init → 2-Way → ExStart → Exchange → Loading → Full`):
 
@@ -611,7 +611,7 @@ Verificar:
 
 ## 15. Testes sugeridos
 
-### 14.1 Teste de alcance entre unidades
+### 15.1 Teste de alcance entre unidades
 
 A partir de um host do Rio de Janeiro, testar conectividade com São Paulo e Belo Horizonte.
 
@@ -624,13 +624,13 @@ ping 172.16.50.1
 ping 172.16.60.1
 ```
 
-### 14.2 Teste de tabela de rotas
+### 15.2 Teste de tabela de rotas
 
 ```bash
 show ip route
 ```
 
-### 14.3 Teste de vizinhança OSPF
+### 15.3 Teste de vizinhança OSPF
 
 ```bash
 show ip ospf neighbor
@@ -638,7 +638,7 @@ show ip ospf neighbor
 
 ---
 
-## 15. Questões para análise
+## 16. Questões para análise
 
 1. Qual a diferença fundamental no cálculo da métrica entre o RIP (contagem de saltos) e o OSPF (custo baseado em largura de banda)?
 2. Quais são os 5 tipos de pacotes OSPF observados no Wireshark e qual o papel operacional de cada um?
@@ -649,28 +649,27 @@ show ip ospf neighbor
 
 ---
 
-## 16. Critérios de avaliação
+## 17. Critérios de avaliação
 
-| Critério | Pontos |
+| Critério | Pontuação |
 |---|---:|
-| Configuração correta das interfaces | 1,5 |
-| Funcionamento do OSPF (adjacências e rotas) | 2,5 |
-| Testes de conectividade | 1,5 |
-| Captura e análise de pacotes OSPF no Wireshark | 2,0 |
-| Troubleshooting proposto | 1,0 |
-| Respostas técnicas às questões de análise | 1,5 |
-
-**Total: 10,0**
+| Configuração correta das interfaces e do OSPF | 2,0 |
+| Formação de adjacências e convergência das tabelas de rotas | 2,0 |
+| Testes de conectividade e alcance entre unidades | 1,5 |
+| Captura e análise dos 5 tipos de pacotes OSPF no Wireshark | 2,0 |
+| Diagnóstico e testes de troubleshooting propostos | 1,0 |
+| Respostas técnicas às questões para análise | 1,5 |
+| **Total** | **10,0** |
 
 ---
 
-## 17. Entregáveis
+## 18. Entregáveis
 
 - print da topologia no PNetLab;
 - print do `show ip ospf neighbor`;
 - print do `show ip route` com OSPF;
 - print do `show ip ospf interface` de pelo menos uma interface;
-- print de todas as saídas dos itens 10 e 11;
+- print de todas as saídas dos itens 10 e 15;
 - arquivo de captura do Wireshark (`.pcapng`) com o tráfego OSPF, incluindo ao menos um pacote de cada tipo (Hello, DBD, LSR, LSU, LSAck);
 - respostas fundamentadas às questões para análise;
 - breve relatório contendo:
@@ -680,6 +679,17 @@ show ip ospf neighbor
   - testes realizados;
   - análise dos pacotes OSPF capturados;
   - comparação conceitual entre OSPF e RIP.
+
+---
+
+## 19. Conclusão esperada
+
+Ao final deste laboratório, o estudante deve compreender:
+
+- a operação do protocolo OSPF em uma topologia corporativa distribuída;
+- a importância da troca de pacotes de controle (Hello, DBD, LSR, LSU, LSAck) para estabelecer a vizinhança e sincronizar a LSDB;
+- a superioridade da métrica de custo sobre a contagem de saltos do RIP;
+- o impacto imediato da alteração de parâmetros e queda de enlaces na convergência da rede.
 
 ---
 
