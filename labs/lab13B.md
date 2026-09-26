@@ -488,7 +488,7 @@ Em uma rede corporativa, somente a porta conectada ao servidor DHCP legítimo ou
 
 As portas de usuários devem permanecer como **untrusted**. Assim, se um usuário conectar um servidor DHCP indevido, o switch bloqueia as respostas DHCP Offer e DHCP ACK vindas dessa porta.
 
-## Objetivo
+#### Objetivo do teste
 
 Observar o comportamento de uma porta configurada como **untrusted** quando um servidor DHCP não autorizado tenta responder solicitações DHCP na rede.
 
@@ -554,7 +554,7 @@ cat /etc/resolv.conf
 
 ---
 
-## 13.7 Resultado Esperado
+### 13.7 Resultado esperado
 
 O cliente deve receber configuração apenas do servidor DHCP legítimo.
 
@@ -569,7 +569,7 @@ O cliente **não deve receber**:
 
 ---
 
-## 13.8 Verificação no Switch
+### 13.8 Verificação no switch
 
 No switch, verifique o funcionamento do DHCP Snooping:
 
@@ -583,7 +583,7 @@ Procure por indícios de pacotes DHCP bloqueados ou descartados na porta **untru
 
 ---
 
-## 13.9 Resultado Esperado
+### 13.9 Validação final da mitigação
 
 Se o DHCP Snooping estiver funcionando corretamente, o servidor DHCP não autorizado pode até tentar responder às solicitações dos clientes, mas suas mensagens DHCP serão bloqueadas pela porta **untrusted**.
 

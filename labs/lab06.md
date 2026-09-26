@@ -66,13 +66,13 @@ De forma mais simples, o BGP funciona como uma **conversa entre grandes redes** 
 
 Ou seja, o BGP ajuda a escolher **qual caminho seguir para sair de uma rede e chegar em outra**.
 
-## eBGP
+### 3.1 eBGP
 
 O **eBGP** significa **External BGP**.
 
 Ele é usado quando a troca de rotas acontece entre roteadores que pertencem a **AS diferentes**, ou seja, entre **redes diferentes**.
 
-### Exemplo
+#### Exemplo de eBGP
 
 - uma empresa no **AS 1000**
 - conectada a um provedor no **AS 100**
@@ -81,13 +81,13 @@ Nesse caso, a sessão entre eles é **eBGP**, porque estão em sistemas autônom
 
 De forma bem simples: o **eBGP conecta uma rede ao mundo externo**.
 
-## iBGP
+### 3.2 iBGP
 
 O **iBGP** significa **Internal BGP**.
 
 Ele é usado quando a troca de rotas acontece entre roteadores do **mesmo AS**, ou seja, **dentro da mesma rede grande**.
 
-### Exemplo
+#### Exemplo de iBGP
 
 - dois roteadores dentro do **AS 1000**
 - compartilhando entre si as rotas aprendidas externamente
@@ -96,7 +96,7 @@ Nesse caso, a sessão entre eles é **iBGP**, porque os dois pertencem ao mesmo 
 
 De forma simples: o **iBGP espalha essa informação dentro da própria rede**.
 
-## Analogia simples
+### 3.3 Analogia didática
 
 Imagine que cada **AS** é como um **país**.
 
@@ -112,7 +112,7 @@ Outra forma de imaginar é pensar em viagens:
 
 
 
-## Resumindo
+### 3.4 Síntese conceitual
 
 - **BGP**: protocolo de roteamento entre sistemas autônomos
 - **eBGP**: troca de rotas entre **AS diferentes**

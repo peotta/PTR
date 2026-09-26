@@ -50,7 +50,7 @@ A atividade foi estruturada para simplificar o primeiro contato com multicast ro
 
 ---
 
-## Fundamentação teórica
+## 3. Fundamentação teórica
 
 Protocolos de roteamento tradicionais foram concebidos para comunicação **unicast**, em que um emissor envia pacotes para um único destino. Em aplicações como transmissão de vídeo, distribuição de conteúdo em tempo real, aulas ao vivo, monitoramento e replicação simultânea de dados, esse modelo pode ser ineficiente, pois obriga a origem a enviar múltiplas cópias do mesmo fluxo para diferentes receptores. Nesse contexto surge o **multicast IP**, cujo objetivo é permitir que um mesmo fluxo seja entregue a vários receptores interessados, reduzindo consumo de banda e processamento na origem.
 
@@ -99,7 +99,7 @@ Entre os modos de operação do PIM, o **PIM Dense Mode (PIM-DM)** foi projetado
 
 ---
 
-## 3. Objetivos
+## 4. Objetivos
 
 Ao final desta atividade, o aluno deverá ser capaz de:
 
@@ -116,7 +116,7 @@ Ao final desta atividade, o aluno deverá ser capaz de:
 
 
 
-## 4. Topologia proposta
+## 5. Topologia proposta
 
 ```mermaid
 flowchart TB
@@ -129,7 +129,7 @@ flowchart TB
 
 ---
 
-## 5. Endereçamento IP
+## 6. Endereçamento IP
 
 | Dispositivo   | Interface | Endereço IP   | Máscara           |Gateway          |
 |---------------|-----------|---------------|-------------------|:-----------------:|
@@ -143,9 +143,9 @@ flowchart TB
 
 ---
 
-## 6. Montagem do cenário no PNetLab
+## 7. Montagem do cenário no PNetLab
 
-### 6.1 Dispositivos necessários
+### 7.1 Dispositivos necessários
 
 Adicionar ao laboratório os seguintes nós:
 
@@ -153,7 +153,7 @@ Adicionar ao laboratório os seguintes nós:
 - 2 nó **Ethernet Switch** compatível: **L2-ADVENTERPRISEK9-M-15.2-IRON-20151103.bin**
 - **2 hosts**,  Linux leves.
 
-### 6.2 Conexões da topologia
+### 7.2 Conexões da topologia
 
 Realizar as conexões conforme abaixo:
 
@@ -162,7 +162,7 @@ Realizar as conexões conforme abaixo:
 - conectar o **Host Receptor** ao **SW2**;
 - conectar o **SW2** à interface **G0/1** do **R1**.
 
-### 6.3 Resultado esperado da montagem
+### 7.3 Resultado esperado da montagem
 
 Ao final da montagem, o cenário deverá permitir:
 
@@ -173,9 +173,9 @@ Ao final da montagem, o cenário deverá permitir:
 
 ---
 
-## 7. Configuração do roteador
+## 8. Configuração do roteador
 
-### 7.1 Configuração básica das interfaces
+### 8.1 Configuração básica das interfaces
 
 ```bash
 enable
@@ -196,7 +196,7 @@ interface g0/1
  exit
 ```
 
-### 7.2 Habilitação do multicast e do PIM-DM
+### 8.2 Habilitação do multicast e do PIM-DM
 
 ```bash
 ip multicast-routing
@@ -215,9 +215,9 @@ copy running-config startup-config
 
 ---
 
-## 8. Configuração dos hosts
+## 9. Configuração dos hosts
 
-### 8.1 Host Origem
+### 9.1 Host Origem
 
 No **Host Origem (Linux simples)**:
 
@@ -227,7 +227,7 @@ ip link set eth0 up
 ip route add default via 192.168.10.1
 ```
 
-### 8.2 Host Receptor
+### 9.2 Host Receptor
 
 No **Host Origem (Linux simples)**:
 
@@ -239,17 +239,17 @@ ip route add default via 192.168.20.1
 
 ---
 
-## 9. Geração de tráfego multicast
+## 10. Geração de tráfego multicast
 
 Para testes de multicast, recomenda-se utilizar **hosts Linux leves** no PNetLab com suporte a ferramentas como `iperf`.
 
-### 9.1 No Host Receptor
+### 10.1 No Host Receptor
 
 ```bash
 iperf -s -u -B 239.1.1.1 -i 1
 ```
 
-### 9.2 No Host Origem
+### 10.2 No Host Origem
 
 ```bash
 iperf -c 239.1.1.1 -u -T 32 -t 30 -i 1
@@ -259,7 +259,7 @@ iperf -c 239.1.1.1 -u -T 32 -t 30 -i 1
 
 ---
 
-## 10. Comandos de verificação no roteador
+## 11. Comandos de verificação no roteador
 
 ```bash
 show ip interface brief
@@ -268,7 +268,7 @@ show ip mroute
 show ip route
 ```
 
-### 10.1 O que observar
+### 11.1 O que observar
 
 - interfaces `G0/0` e `G0/1` em estado `up/up`;
 - PIM habilitado nas interfaces;
@@ -277,7 +277,7 @@ show ip route
 
 ---
 
-## 11. Resultados esperados
+## 12. Resultados esperados
 
 Ao concluir a atividade, o aluno deve verificar que:
 
@@ -288,7 +288,7 @@ Ao concluir a atividade, o aluno deve verificar que:
 
 ---
 
-## 12. Checklist de validação
+## 13. Checklist de validação
 
 - [ ] Topologia criada corretamente no PNetLab  
 - [ ] Interfaces do roteador configuradas com os IPs corretos  
@@ -303,7 +303,7 @@ Ao concluir a atividade, o aluno deve verificar que:
 
 ---
 
-## 13. Questões para análise
+## 14. Questões para análise
 
 1. Por que o PIM é considerado independente do protocolo de roteamento unicast?
 2. Qual a diferença entre tráfego unicast e multicast neste cenário?
@@ -313,21 +313,20 @@ Ao concluir a atividade, o aluno deve verificar que:
 
 ---
 
-## 14. Critérios de avaliação
+## 15. Critérios de avaliação
 
-| Critério | Pontos |
+| Critério | Pontuação |
 |---|---:|
 | Configuração do roteamento unicast base e endereçamento das interfaces | 2,0 |
 | Habilitação do roteamento multicast (`ip multicast-routing`) e PIM-DM | 3,0 |
 | Testes de geração e recepção de tráfego multicast com sucesso | 2,0 |
 | Inspeção e interpretação de `show ip pim interface` e `show ip mroute` | 1,5 |
 | Respostas técnicas fundamentadas às questões de análise | 1,5 |
-
-**Total: 10,0**
+| **Total** | **10,0** |
 
 ---
 
-## 15. Entregáveis
+## 16. Entregáveis
 
 O aluno deverá entregar:
 - captura de tela da topologia montada no PNetLab;
@@ -339,7 +338,7 @@ O aluno deverá entregar:
 
 ---
 
-## 16. Observação técnica
+## 17. Observação técnica
 
 Nem toda imagem de roteador Cisco disponível no PNetLab suporta multicast/PIM integralmente. Para esta atividade, recomenda-se utilizar imagens como:
 
@@ -351,7 +350,7 @@ Nem toda imagem de roteador Cisco disponível no PNetLab suporta multicast/PIM i
 
 ---
 
-## 17. Conclusão
+## 18. Conclusão
 
 Esta atividade apresenta o primeiro cenário prático de multicast IP com PIM-DM em ambiente controlado no PNetLab. O laboratório permite que o aluno compreenda como o roteador passa a tratar tráfego multicast, formando a base conceitual e operacional necessária para topologias mais complexas nas próximas práticas.
 
