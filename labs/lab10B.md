@@ -333,15 +333,14 @@ sudo conntrack -L
 
 ## Critérios de avaliação
 
-| Critério | Pontos |
+| Critério | Pontuação |
 |---|---:|
 | Reutilização correta da topologia e do endereçamento | 1,5 |
-| Limpeza e aplicação correta das regras | 2,0 |
-| Implementação da lógica stateful com `conntrack` | 3,0 |
-| Testes práticos de conectividade e bloqueio | 2,0 |
-| Comparação entre Laboratório  10 e Laboratório  10B | 1,5 |
-
-**Total: 10,0**
+| Limpeza e aplicação das políticas padrão e regras com `conntrack` | 2,5 |
+| Implementação da lógica stateful (`ESTABLISHED,RELATED` e `NEW`) | 2,5 |
+| Testes práticos de conectividade unidirecional e bloqueio | 1,5 |
+| Respostas técnicas às questões para análise e tabela comparativa | 2,0 |
+| **Total** | **10,0** |
 
 ---
 
@@ -349,7 +348,7 @@ sudo conntrack -L
 
 Cada aluno deve entregar relatório contendo:
 
-- print da topologia no PNetLab ;
+- print da topologia no PNetLab;
 - print da configuração IP dos três Linux;
 - print do comando `iptables -L -n -v`;
 - evidência dos testes de:
@@ -357,10 +356,9 @@ Cada aluno deve entregar relatório contendo:
   - ping iniciado pelo Cliente 2 e falhando;
   - HTTP iniciado pelo Cliente 1 e funcionando;
   - tentativa de Telnet bloqueada;
-- tabela comparativa preenchida entre **Laboratório  10** e **Laboratório  10B**;
-- texto curto explicando a diferença entre:
-  - firewall de pacotes;
-  - firewall stateful.
+- tabela comparativa preenchida entre **Laboratório 10** e **Laboratório 10B**;
+- texto curto explicando a diferença entre firewall de pacotes e firewall stateful;
+- respostas completas às questões para análise.
 
 ---
 

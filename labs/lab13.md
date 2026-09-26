@@ -527,7 +527,7 @@ ping 192.168.0.1
 
 ---
 
-## 17. Questões para Fixação
+## 17. Questões para análise
 
 1. Qual é a função principal do protocolo DHCP?
 2. Por que o DHCP facilita a administração de redes?
@@ -542,21 +542,7 @@ ping 192.168.0.1
 
 ---
 
-## 18. Atividade de Entrega
-
-Cada aluno deverá entregar um relatório contendo:
-
-- print ou saída do comando `ip -br addr` no servidor;
-- print ou saída do comando `ip -br addr` nos quatro clientes;
-- trecho do arquivo `/etc/dhcp/dhcpd.conf`;
-- saída do arquivo `/var/lib/dhcp/dhcpd.leases`;
-- evidência do processo DORA usando `tcpdump`;
-- teste de conectividade entre clientes e servidor;
-- respostas das questões de fixação.
-
----
-
-## 19. Critérios de Avaliação
+## 18. Critérios de avaliação
 
 | Critério | Pontuação |
 |---|---:|
@@ -567,8 +553,21 @@ Cada aluno deverá entregar um relatório contendo:
 | Quatro clientes recebendo IP automaticamente | 2,0 |
 | Testes de conectividade realizados | 1,0 |
 | Análise com `tcpdump` ou logs | 1,0 |
-| Respostas das questões de fixação | 0,5 |
+| Respostas técnicas às questões de análise | 0,5 |
 | **Total** | **10,0** |
+
+---
+
+## 19. Entregáveis
+
+Cada aluno deverá entregar um relatório contendo:
+- print ou saída do comando `ip -br addr` no servidor;
+- print ou saída do comando `ip -br addr` nos quatro clientes;
+- trecho do arquivo `/etc/dhcp/dhcpd.conf`;
+- saída do arquivo `/var/lib/dhcp/dhcpd.leases`;
+- evidência do processo DORA usando `tcpdump`;
+- teste de conectividade entre clientes e servidor;
+- respostas completas às questões para análise.
 
 ---
 

@@ -353,19 +353,33 @@ Depois:
 
 ---
 
-## 16. Entrega
+## 16. Critérios de avaliação
 
-O aluno deverá entregar:
+| Critério | Pontos |
+|---|---:|
+| Montagem da topologia e endereçamento correto das interfaces | 2,0 |
+| Configuração do protocolo RIPv2 (`version 2`, `no auto-summary`, anúncios) | 2,5 |
+| Execução do teste de falha de enlace e análise da convergência | 2,5 |
+| Verificação com comandos CLI (`show ip route`) e testes de conectividade | 1,5 |
+| Respostas técnicas fundamentadas às questões de análise | 1,5 |
 
-- captura de tela da topologia montada no PNetLab;
-- configurações de **R1**, **R2** e **R3**;
-- saídas de `show ip route` antes e depois da falha;
-- evidência do `ping` antes e depois da falha;
-- breve análise do tempo de convergência observado.
+**Total: 10,0**
 
 ---
 
-## 17. Conclusão
+## 17. Entregáveis
+
+O aluno deverá entregar:
+- captura de tela da topologia montada no PNetLab;
+- configurações de **R1**, **R2** e **R3** (`show running-config`);
+- saídas de `show ip route` antes e depois da falha de enlace;
+- evidência do `ping` antes e depois da falha;
+- respostas completas às questões para análise;
+- breve relatório síntese com análise do tempo de convergência observado e conclusão.
+
+---
+
+## 18. Conclusão
 
 Este laboratório amplia a complexidade das práticas anteriores ao introduzir um protocolo de roteamento dinâmico e a análise do comportamento da rede diante de falhas. A configuração do **RIPv2** em uma topologia com múltiplos roteadores permite ao aluno compreender como rotas são propagadas, aprendidas e removidas.
 
@@ -374,5 +388,6 @@ A observação do processo de convergência evidencia limitações clássicas do
 ---
 
 [← Anterior: Laboratório 03](lab03.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 05 →](lab05.md)
+
 
 

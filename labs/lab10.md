@@ -595,16 +595,14 @@ sudo iptables -S
 
 ## Critérios de avaliação
 
-| Critério | Pontos |
+| Critério | Pontuação |
 |---|---:|
-| Configuração correta do endereçamento | 1,5 |
-| Ativação correta do roteamento IP | 1,0 |
-| Implementação das regras de `iptables` | 3,0 |
-| Testes práticos de conectividade e bloqueio | 2,0 |
-| Verificação e interpretação das regras | 1,5 |
-| Respostas às questões de análise | 1,0 |
-
-**Total: 10,0**
+| Configuração do endereçamento IP e validação da conectividade de enlace | 1,5 |
+| Ativação do roteamento IP (`ip_forward`) no gateway Linux | 1,0 |
+| Implementação das políticas padrão e regras de filtragem no `iptables` | 3,0 |
+| Testes práticos de conectividade e bloqueio (ping, HTTP e Telnet) | 2,5 |
+| Respostas técnicas às questões para análise | 2,0 |
+| **Total** | **10,0** |
 
 ---
 
@@ -622,7 +620,8 @@ Cada aluno deve entregar relatório contendo:
 - relatório curto contendo:
   - objetivo do laboratório;
   - resumo das regras criadas;
-  - análise do que foi permitido e do que foi bloqueado.
+  - análise do que foi permitido e do que foi bloqueado;
+- respostas completas às questões para análise.
 
 ---
 

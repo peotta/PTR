@@ -591,7 +591,7 @@ Assim, apenas o servidor DHCP legítimo, conectado à porta **trusted**, será c
 
 ---
 
-## Questões de Análise
+## 14. Análise e Verificação Experimental
 
 1. O cliente recebeu endereço do servidor legítimo ou do servidor não autorizado?
 2. A porta **untrusted** bloqueou as respostas DHCP falsas?
@@ -653,7 +653,7 @@ ping 192.168.0.254
 
 ---
 
-## 17. Questões para Fixação
+## 17. Questões para análise
 
 1. Por que o DHCP pode representar um risco de segurança em redes locais?
 2. O que é um servidor DHCP não autorizado?
@@ -668,7 +668,20 @@ ping 192.168.0.254
 
 ---
 
-## 18. Atividade de Entrega
+## 18. Critérios de avaliação
+
+| Critério | Pontuação |
+|---|---:|
+| Continuidade do cenário e topologia com servidor legítimo e rogue DHCP | 1,5 |
+| Configuração e verificação do comportamento com Rogue DHCP | 2,0 |
+| Configuração e ativação de DHCP Snooping (portas trusted/untrusted) | 2,5 |
+| Comandos de validação, inspeção no switch e análise de pacotes com `tcpdump` | 2,0 |
+| Respostas técnicas às questões para análise | 2,0 |
+| **Total** | **10,0** |
+
+---
+
+## 19. Entregáveis
 
 Cada aluno deverá entregar um relatório contendo:
 
@@ -678,25 +691,8 @@ Cada aluno deverá entregar um relatório contendo:
 - evidência da resposta do servidor não autorizado em ambiente controlado;
 - comparação entre configuração legítima e indevida;
 - saída de `tcpdump` mostrando mensagens DHCP;
-- explicação do impacto de gateway ou DNS incorreto;
-- proposta de mitigação usando DHCP Snooping;
-- respostas às questões de fixação.
-
----
-
-## 19. Critérios de Avaliação
-
-| Critério | Pontuação |
-|---|---:|
-| Continuidade correta a partir do Lab 13 | 1,0 |
-| Topologia com servidor legítimo, servidor não autorizado e clientes | 1,5 |
-| Análise correta dos parâmetros DHCP recebidos | 1,5 |
-| Uso de `tcpdump` para observar mensagens DHCP | 1,5 |
-| Identificação dos riscos de gateway e DNS indevidos | 1,5 |
-| Explicação do DHCP Snooping | 1,0 |
-| Proposta de boas práticas de mitigação | 1,0 |
-| Respostas às questões de fixação | 1,0 |
-| **Total** | **10,0** |
+- evidência da configuração e validação do DHCP Snooping no switch (`show ip dhcp snooping`, `show ip dhcp snooping binding`);
+- respostas completas às questões para análise.
 
 ---
 

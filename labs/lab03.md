@@ -313,19 +313,33 @@ Ao concluir a atividade, o aluno deve verificar que:
 
 ---
 
-## 14. Entrega
+## 14. Critérios de avaliação
 
-O aluno deverá entregar:
+| Critério | Pontos |
+|---|---:|
+| Configuração do roteamento unicast base e endereçamento das interfaces | 2,0 |
+| Habilitação do roteamento multicast (`ip multicast-routing`) e PIM-DM | 3,0 |
+| Testes de geração e recepção de tráfego multicast com sucesso | 2,0 |
+| Inspeção e interpretação de `show ip pim interface` e `show ip mroute` | 1,5 |
+| Respostas técnicas fundamentadas às questões de análise | 1,5 |
 
-- captura de tela da topologia montada no PNetLab;
-- configuração aplicada no roteador;
-- saída dos comandos `show ip pim interface` e `show ip mroute`;
-- evidência do envio do tráfego multicast;
-- evidência da recepção do tráfego multicast.
+**Total: 10,0**
 
 ---
 
-## 15. Observação técnica
+## 15. Entregáveis
+
+O aluno deverá entregar:
+- captura de tela da topologia montada no PNetLab;
+- configuração aplicada no roteador (`show running-config`);
+- saída dos comandos `show ip pim interface` e `show ip mroute`;
+- evidência do envio e da recepção do tráfego multicast;
+- respostas completas às questões para análise;
+- relatório síntese contendo objetivo, metodologia e conclusão.
+
+---
+
+## 16. Observação técnica
 
 Nem toda imagem de roteador Cisco disponível no PNetLab suporta multicast/PIM integralmente. Para esta atividade, recomenda-se utilizar imagens como:
 
@@ -337,11 +351,12 @@ Nem toda imagem de roteador Cisco disponível no PNetLab suporta multicast/PIM i
 
 ---
 
-## 16. Conclusão
+## 17. Conclusão
 
 Esta atividade apresenta o primeiro cenário prático de multicast IP com PIM-DM em ambiente controlado no PNetLab. O laboratório permite que o aluno compreenda como o roteador passa a tratar tráfego multicast, formando a base conceitual e operacional necessária para topologias mais complexas nas próximas práticas.
 
 ---
 
 [← Anterior: Laboratório 02](lab02.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 04 →](lab04.md)
+
 

@@ -239,7 +239,7 @@ Ao final da montagem, o laboratório deverá permitir:
 
 ---
 
-## 11. Questões para reflexão
+## 11. Questões para análise
 
 1. Qual a diferença entre acesso **via console** e acesso **remoto pela rede**?
 2. Qual a função do comando `no ip domain-lookup` em laboratório?
@@ -249,25 +249,39 @@ Ao final da montagem, o laboratório deverá permitir:
 
 ---
 
-## 12. Entrega
+## 12. Critérios de avaliação
 
-O aluno deverá entregar:
+| Critério | Pontos |
+|---|---:|
+| Configuração básica do roteador (hostname, senhas, console, domain-lookup) | 2,0 |
+| Atribuição correta de IP na interface FastEthernet e ativação (`no shutdown`) | 2,5 |
+| Habilitação e teste do acesso remoto seguro (SSH nas linhas VTY) | 2,0 |
+| Verificação com comandos CLI (`show ip int brief`, `show running-config`) e ping | 1,5 |
+| Respostas técnicas fundamentadas às questões de análise | 2,0 |
 
-- captura de tela da topologia no PNetLab;
-- saída do comando `show ip interface brief`;
-- saída do comando `show running-config`;
-- evidência do teste de `ping`;
-- evidência do acesso remoto via SSH, quando aplicável.
-
-> O aluno deve seguir rigorosamente os **roteiros** utilizando o modelo de [**relatório**](https://github.com/ProfessorLaerte/labredes/blob/main/labs/relatorio.md) e registrar os resultados conforme solicitado.
+**Total: 10,0**
 
 ---
 
-## 13. Conclusão
+## 13. Entregáveis
+
+O aluno deverá entregar:
+- captura de tela da topologia no PNetLab;
+- saída do comando `show ip interface brief`;
+- saída do comando `show running-config`;
+- evidência do teste de `ping` entre PCs e roteador;
+- evidência do acesso remoto via SSH;
+- respostas completas às questões para análise;
+- breve relatório síntese com objetivo e conclusão.
+
+---
+
+## 14. Conclusão
 
 Este laboratório introduz a configuração básica de roteadores no PNetLab e estabelece as competências mínimas necessárias para os próximos cenários da disciplina. Dominar CLI, interface IP, acesso remoto e testes de conectividade é essencial antes da evolução para protocolos de roteamento e atividades de diagnóstico mais avançadas.
 
 ---
 
 [← Anterior: Laboratório 01](lab01.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 03 →](lab03.md)
+
 

@@ -638,6 +638,17 @@ show ip ospf neighbor
 
 ---
 
+## 15. Questões para análise
+
+1. Qual a diferença fundamental no cálculo da métrica entre o RIP (contagem de saltos) e o OSPF (custo baseado em largura de banda)?
+2. Quais são os 5 tipos de pacotes OSPF observados no Wireshark e qual o papel operacional de cada um?
+3. Descreva a evolução dos estados de adjacência do OSPF (de Down até Full) durante a inicialização de uma vizinhança.
+4. Por que em enlaces ponto a ponto (interfaces seriais ou Gigabit ponto a ponto) não há eleição de DR (*Designated Router*) e BDR (*Backup Designated Router*)?
+5. O que é a LSDB (*Link-State Database*) e qual algoritmo é executado sobre ela para preencher a tabela de rotas do roteador?
+6. Em caso de queda de um enlace, por que o OSPF converge significativamente mais rápido que o RIP?
+
+---
+
 ## 16. Critérios de avaliação
 
 | Critério | Pontos |
@@ -647,7 +658,7 @@ show ip ospf neighbor
 | Testes de conectividade | 1,5 |
 | Captura e análise de pacotes OSPF no Wireshark | 2,0 |
 | Troubleshooting proposto | 1,0 |
-| Análise comparativa OSPF x RIP | 1,5 |
+| Respostas técnicas às questões de análise | 1,5 |
 
 **Total: 10,0**
 
@@ -661,6 +672,7 @@ show ip ospf neighbor
 - print do `show ip ospf interface` de pelo menos uma interface;
 - print de todas as saídas dos itens 10 e 11;
 - arquivo de captura do Wireshark (`.pcapng`) com o tráfego OSPF, incluindo ao menos um pacote de cada tipo (Hello, DBD, LSR, LSU, LSAck);
+- respostas fundamentadas às questões para análise;
 - breve relatório contendo:
   - objetivo;
   - topologia;
@@ -668,7 +680,9 @@ show ip ospf neighbor
   - testes realizados;
   - análise dos pacotes OSPF capturados;
   - comparação conceitual entre OSPF e RIP.
+
 ---
 
 [← Anterior: Laboratório 04](lab04.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 06 →](lab06.md)
+
 

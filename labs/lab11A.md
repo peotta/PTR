@@ -562,16 +562,14 @@ O host intermediário atua como **proxy reverso com inspeção HTTP**, o que sig
 
 ## Critérios de avaliação
 
-| Critério | Pontos |
+| Critério | Pontuação |
 |---|---:|
-| Configuração correta do endereçamento | 1,5 |
-| Instalação e configuração do servidor web interno | 1,5 |
-| Instalação do Nginx no host WAF | 1,0 |
-| Instalação e ativação do ModSecurity + CRS | 2,5 |
-| Configuração funcional do proxy reverso | 2,0 |
-| Testes, logs e análise das questões | 1,5 |
-
-**Total: 10,0**
+| Configuração correta da topologia e endereçamento IP | 1,5 |
+| Instalação e validação do servidor web interno (backend) | 1,5 |
+| Instalação do Nginx e configuração do proxy reverso no WAF | 2,5 |
+| Ativação e configuração do ModSecurity com OWASP CRS | 2,5 |
+| Verificação de logs e respostas técnicas às questões para análise | 2,0 |
+| **Total** | **10,0** |
 
 ---
 
@@ -588,7 +586,8 @@ Cada aluno deve entregar:
 - relatório curto contendo:
   - objetivo do laboratório;
   - descrição do fluxo Cliente → WAF → Servidor Web;
-  - explicação da diferença entre firewall tradicional, stateful e WAF.
+  - explicação da diferença entre firewall tradicional, stateful e WAF;
+- respostas completas às questões para análise.
 
 ---
 

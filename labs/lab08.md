@@ -346,15 +346,14 @@ show running-config
 
 ## 15. Critérios de avaliação
 
-| Critério | Pontos |
-| --- | --- |
-| Configuração correta do OSPF | 2,0 |
-| Configuração correta do BGP | 3,0 |
-| Aplicação da política de preferência | 2,0 |
-| Integração controlada BGP–OSPF | 1,5 |
-| Verificação e análise técnica | 1,5 |
-
-**Total: 10,0**
+| Critério | Pontuação |
+|---|---:|
+| Configuração e convergência do OSPF interno | 2,0 |
+| Configuração das sessões BGP com ISP1 (multihop/loopback) e ISP2 | 2,5 |
+| Aplicação da política de preferência de saída (local-preference / weight) | 2,0 |
+| Integração e propagação seletiva da rota default no OSPF | 1,5 |
+| Comandos de verificação e respostas técnicas às questões para análise | 2,0 |
+| **Total** | **10,0** |
 
 ---
 
@@ -362,16 +361,17 @@ show running-config
 
 Cada aluno deve entregar relatório contendo:
 
-- print da topologia no pnetlab
-- print do `show ip bgp summary` no R1
-- print do `show ip bgp` no R1
-- print do `show ip route` no R1
-- print do `show ip ospf` ou `show ip protocols`
+- print da topologia no PNetLab;
+- print do `show ip bgp summary` no R1;
+- print do `show ip bgp` no R1;
+- print do `show ip route` no R1;
+- print do `show ip ospf neighbor` ou `show ip protocols`;
 - relatório curto contendo:
-  - objetivo do laboratório.
-  - descrição da política aplicada.
-  - explicação da integração OSPF/BGP.
-  - análise do comportamento em caso de falha.
+  - objetivo do laboratório;
+  - descrição da política aplicada;
+  - explicação da integração OSPF/BGP;
+  - análise do comportamento em caso de falha;
+- respostas completas às questões para análise.
 
 ---
 

@@ -456,7 +456,8 @@ Durante a verificação e a análise de pacotes, o aluno deve observar:
   - objetivo;
   - comandos executados;
   - explicação da sessão com loopback e análise de TTL;
-  - conclusão.
+  - conclusão;
+- respostas completas às questões para análise.
 
 ---
 

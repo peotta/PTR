@@ -318,7 +318,43 @@ Nos provedores, deve aparecer o prefixo da empresa:
 
 ---
 
+## 9. Questões para análise
+
+1. Por que os provedores ISP1, ISP2 e ISP3 não anunciam suas redes internas de enlace e gerência diretamente para os clientes ou para a Internet pública?
+2. Qual a importância técnica e econômica do estabelecimento de sessões de *Peering* direto entre provedores (ISP1-ISP3 e ISP2-ISP3) para a latência e o tráfego global?
+3. Qual a diferença operacional observada entre a sessão eBGP com o ISP1 (via interface Loopback com múltiplos enlaces) e a sessão com o ISP2 (enlace físico único direto)?
+4. Ao inspecionar a tabela BGP no ISP3 (`show ip bgp`), como ele aprendeu a rota para o prefixo da empresa (`200.18.245.64/27`)? Qual o *AS-Path* e o próximo salto (*Next Hop*) exibidos?
+5. O que aconteceria com o fluxo de tráfego da empresa caso o enlace primário entre R1 e ISP1 sofresse uma interrupção física? Como o BGP reage diante desse evento?
+
+---
+
+## 10. Critérios de avaliação
+
+| Critério | Pontos |
+|---|---:|
+| Configuração e ativação das interfaces dos provedores | 2,0 |
+| Estabelecimento das sessões eBGP (adjacências *Established*) | 3,0 |
+| Propagação e validação correta dos prefixos (181-185/8 e 200.18.245.64/27) | 2,0 |
+| Testes de conectividade e análise de rotas (`show ip bgp` / `show ip route`) | 1,5 |
+| Respostas técnicas às questões de análise | 1,5 |
+
+**Total: 10,0**
+
+---
+
+## 11. Entregáveis
+
+- print da topologia montada no emulador com indicação dos estados BGP;
+- print da saída de `show ip bgp summary` em **ISP1**, **ISP2** e **ISP3**;
+- print da tabela BGP (`show ip bgp`) no **ISP3**, comprovando o aprendizado do bloco `200.18.245.64/27`;
+- evidência de testes de `ping` a partir de R1 para os prefixos de destino na Internet (`181.0.0.1`, etc.);
+- respostas técnicas fundamentadas às questões de análise;
+- relatório síntese contendo: objetivo, configuração aplicada nos provedores, análise do fluxo de anúncios e conclusão.
+
+---
+
 [← Anterior: Laboratório 06](lab06.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 08 →](lab08.md)
+
 
 
 

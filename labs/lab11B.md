@@ -353,16 +353,14 @@ Caso o ambiente esteja estável, o professor pode pedir uma pequena atividade de
 
 ## Critérios de avaliação
 
-| Critério | Pontos |
+| Critério | Pontuação |
 |---|---:|
-| Validação correta do ambiente do Lab 11A | 1,5 |
-| Execução dos testes legítimos | 1,5 |
-| Execução dos testes suspeitos | 2,5 |
-| Coleta e interpretação dos logs | 2,5 |
-| Comparação entre os tipos de firewall | 1,0 |
-| Respostas às questões analíticas | 1,0 |
-
-**Total: 10,0**
+| Validação e operacionalidade do ambiente herdado do Lab 11A | 1,5 |
+| Execução correta dos testes de tráfego legítimo (curl / HTTP) | 1,5 |
+| Execução dos testes de tráfego malicioso (SQLi, XSS, Path Traversal) | 2,5 |
+| Coleta, análise e correlação dos logs do Nginx e ModSecurity | 2,5 |
+| Respostas técnicas às questões para análise e tabela comparativa | 2,0 |
+| **Total** | **10,0** |
 
 ---
 
@@ -379,7 +377,8 @@ Cada aluno deve entregar:
 - relatório curto explicando:
   - o que foi permitido;
   - o que foi bloqueado;
-  - por que isso demonstra a atuação do WAF.
+  - por que isso demonstra a atuação do WAF;
+- respostas completas às questões para análise.
 
 ---
 

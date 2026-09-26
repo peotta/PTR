@@ -210,16 +210,41 @@ Relacionar explicitamente com:
     
 - Plano de dados × plano de controle
 
-## Entrega
+---
 
-O aluno deverá enviar relatório em **PDF** pelo ambiente Teams disponibilizado pelo professor:
+## Questões para análise
 
-- captura de tela da topologia no PNetLab;
-- saída dos comandos;
-- Respostas da discussão orientada.
+1. No teste inicial, por que o Host A conseguiu alcançar a interface local do roteador (`192.168.10.1`), mas não conseguiu se comunicar com o Host B (`192.168.20.10`)?
+2. Qual a função exata do comando de gateway padrão (`ip route add default via ...`) configurado nos hosts e o que ocorre na ausência dele?
+3. O roteador intermediário precisa conhecer o caminho completo de ponta a ponta até a aplicação final para encaminhar os pacotes? Justifique com base no conceito de decisão salto a salto (*hop-by-hop*).
+4. Explique a diferença prática observada neste laboratório entre **Encaminhamento (*Forwarding* - Plano de Dados)** e **Roteamento (*Routing* - Plano de Controle)**.
 
-> O aluno deve seguir rigorosamente os **roteiros** utilizando o modelo de [**relatório**](https://github.com/ProfessorLaerte/labredes/blob/main/labs/relatorio.md) e registrar os resultados conforme solicitado.
+---
+
+## Critérios de avaliação
+
+| Critério | Pontos |
+|---|---:|
+| Montagem correta da topologia e endereçamento IP das interfaces | 2,0 |
+| Configuração de rotas estáticas / gateway padrão nos hosts | 2,5 |
+| Execução e validação dos testes de conectividade (`ping`) | 2,0 |
+| Inspeção e interpretação das tabelas de rotas (`ip route`) | 1,5 |
+| Respostas técnicas fundamentadas às questões de análise | 2,0 |
+
+**Total: 10,0**
+
+---
+
+## Entregáveis
+
+O aluno deverá enviar relatório técnico contendo:
+- captura de tela da topologia montada e ativa no PNetLab;
+- evidência da configuração IP e tabela de rotas (`ip route`) em Host A, Host B e Roteador;
+- evidência dos testes de ping (falha inicial antes do gateway e sucesso após a configuração);
+- respostas completas e fundamentadas às **Questões para análise**;
+- breve relatório síntese com objetivo, comandos utilizados e conclusão.
 
 ---
 
 [Índice Geral (README)](../README.md) | [Próximo: Laboratório 02 →](lab02.md)
+

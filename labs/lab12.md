@@ -451,16 +451,14 @@ Resultado esperado: alerta correspondente nos logs.
 
 ## Critérios de avaliação
 
-| Critério | Pontos |
+| Critério | Pontuação |
 |---|---:|
-| Validação correta do ambiente existente | 1,5 |
-| Instalação do Suricata | 2,0 |
-| Atualização de regras e execução correta | 2,0 |
-| Geração de tráfego legítimo e suspeito | 2,0 |
-| Coleta e interpretação de logs | 1,5 |
-| Respostas às questões analíticas | 1,0 |
-
-**Total: 10,0**
+| Validação e operacionalidade da topologia base | 1,5 |
+| Instalação, configuração de interfaces e modo de operação do Suricata | 2,0 |
+| Atualização e configuração de regras de detecção de assinaturas | 2,0 |
+| Geração e análise de tráfego legítimo vs. tráfego suspeito/malicioso | 2,5 |
+| Análise forense de logs (`fast.log`, `eve.json`) e respostas às questões para análise | 2,0 |
+| **Total** | **10,0** |
 
 ---
 
@@ -478,7 +476,8 @@ Cada aluno deve entregar:
 - relatório curto explicando:
   - o que foi detectado;
   - o que não foi detectado;
-  - por que IDS/IPS complementa as outras tecnologias estudadas.
+  - por que IDS/IPS complementa as outras tecnologias estudadas;
+- respostas completas às questões para análise.
 
 ---
 

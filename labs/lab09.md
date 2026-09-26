@@ -464,15 +464,14 @@ Peça aos alunos que identifiquem:
 
 ## 16. Critérios de avaliação
 
-| Critério | Pontos |
+| Critério | Pontuação |
 |---|---:|
-| Identificação correta dos papéis CE, PE e P | 1,5 |
-| Configuração correta do OSPF no backbone | 3,0 |
-| Habilitação correta do MPLS nos enlaces internos | 2,5 |
-| Verificação técnica do backbone MPLS | 2,0 |
-| Análise conceitual e comparação com o Lab 08 | 1,0 |
-
-**Total: 10,0**
+| Identificação correta dos papéis CE, PE e P na topologia | 1,5 |
+| Configuração e convergência do OSPF no backbone | 2,5 |
+| Habilitação do MPLS e formação de adjacência LDP nos enlaces internos | 2,5 |
+| Comandos de verificação técnica (`show mpls interfaces`, `ldp neighbor`, `forwarding-table`) | 1,5 |
+| Respostas técnicas às questões para análise e comparação didática | 2,0 |
+| **Total** | **10,0** |
 
 ---
 
@@ -480,7 +479,7 @@ Peça aos alunos que identifiquem:
 
 Cada aluno deve entregar:
 
-- print da topologia no Pnetlab;
+- print da topologia no PNetLab;
 - print do `show ip ospf neighbor` em pelo menos um roteador do backbone;
 - print do `show mpls interfaces`;
 - print do `show mpls ldp neighbor`;
@@ -488,7 +487,8 @@ Cada aluno deve entregar:
 - relatório curto contendo:
   - objetivo do laboratório;
   - papéis CE, PE e P no cenário;
-  - conclusão sobre o uso de MPLS no backbone.
+  - conclusão sobre o uso de MPLS no backbone;
+- respostas completas às questões para análise.
 
 ---
 
