@@ -82,31 +82,20 @@ Cada unidade possui duas LANs locais, e os roteadores são interligados por duas
 ```mermaid
 flowchart LR
   %% =========================
-  %% Roteadores
-  %% =========================
-  RJR["Router-RJ<br/>Rio de Janeiro"]
-  SPR["Router-SP<br/>São Paulo"]
-  BHR["Router-BH<br/>Belo Horizonte"]
-
-  RJR ---|WAN 172.16.100.0/24| SPR
-  SPR ---|WAN 172.16.200.0/24| BHR
-
-  %% =========================
   %% Rio de Janeiro
   %% =========================
   subgraph RJ["Rio de Janeiro"]
-    direction TB
-    RJR
-    SWRJ10["SW-RJ-10<br/>172.16.10.0/24"]
-    SWRJ20["SW-RJ-20<br/>172.16.20.0/24"]
+    RJR["Router-RJ<br>Rio de Janeiro"]
+    SWRJ10["SW-RJ-10<br>172.16.10.0/24"]
+    SWRJ20["SW-RJ-20<br>172.16.20.0/24"]
 
     RJR --- SWRJ10
     RJR --- SWRJ20
 
-    VPCRJ1["VPC-RJ-1<br/>172.16.10.1"]
-    VPCRJ2["VPC-RJ-2<br/>172.16.10.2"]
-    VPCRJ3["VPC-RJ-3<br/>172.16.20.1"]
-    VPCRJ4["VPC-RJ-4<br/>172.16.20.2"]
+    VPCRJ1["VPC-RJ-1<br>172.16.10.1"]
+    VPCRJ2["VPC-RJ-2<br>172.16.10.2"]
+    VPCRJ3["VPC-RJ-3<br>172.16.20.1"]
+    VPCRJ4["VPC-RJ-4<br>172.16.20.2"]
 
     SWRJ10 --- VPCRJ1
     SWRJ10 --- VPCRJ2
@@ -118,18 +107,17 @@ flowchart LR
   %% São Paulo
   %% =========================
   subgraph SP["São Paulo"]
-    direction TB
-    SPR
-    SWSP30["SW-SP-30<br/>172.16.30.0/24"]
-    SWSP40["SW-SP-40<br/>172.16.40.0/24"]
+    SPR["Router-SP<br>São Paulo"]
+    SWSP30["SW-SP-30<br>172.16.30.0/24"]
+    SWSP40["SW-SP-40<br>172.16.40.0/24"]
 
     SPR --- SWSP30
     SPR --- SWSP40
 
-    VPCSP1["VPC-SP-1<br/>172.16.30.1"]
-    VPCSP2["VPC-SP-2<br/>172.16.30.2"]
-    VPCSP3["VPC-SP-3<br/>172.16.40.1"]
-    VPCSP4["VPC-SP-4<br/>172.16.40.2"]
+    VPCSP1["VPC-SP-1<br>172.16.30.1"]
+    VPCSP2["VPC-SP-2<br>172.16.30.2"]
+    VPCSP3["VPC-SP-3<br>172.16.40.1"]
+    VPCSP4["VPC-SP-4<br>172.16.40.2"]
 
     SWSP30 --- VPCSP1
     SWSP30 --- VPCSP2
@@ -141,24 +129,29 @@ flowchart LR
   %% Belo Horizonte
   %% =========================
   subgraph BH["Belo Horizonte"]
-    direction TB
-    BHR
-    SWBH50["SW-BH-50<br/>172.16.50.0/24"]
-    SWBH60["SW-BH-60<br/>172.16.60.0/24"]
+    BHR["Router-BH<br>Belo Horizonte"]
+    SWBH50["SW-BH-50<br>172.16.50.0/24"]
+    SWBH60["SW-BH-60<br>172.16.60.0/24"]
 
     BHR --- SWBH50
     BHR --- SWBH60
 
-    VPCBH1["VPC-BH-1<br/>172.16.50.1"]
-    VPCBH2["VPC-BH-2<br/>172.16.50.2"]
-    VPCBH3["VPC-BH-3<br/>172.16.60.1"]
-    VPCBH4["VPC-BH-4<br/>172.16.60.2"]
+    VPCBH1["VPC-BH-1<br>172.16.50.1"]
+    VPCBH2["VPC-BH-2<br>172.16.50.2"]
+    VPCBH3["VPC-BH-3<br>172.16.60.1"]
+    VPCBH4["VPC-BH-4<br>172.16.60.2"]
 
     SWBH50 --- VPCBH1
     SWBH50 --- VPCBH2
     SWBH60 --- VPCBH3
     SWBH60 --- VPCBH4
   end
+
+  %% =========================
+  %% Interligações WAN
+  %% =========================
+  RJR -- "WAN 172.16.100.0/24" --- SPR
+  SPR -- "WAN 172.16.200.0/24" --- BHR
 
   %% =========================
   %% Cores dos equipamentos
@@ -174,9 +167,9 @@ flowchart LR
   %% =========================
   %% Blocos dos estados
   %% =========================
-  style RJ fill:transparent,stroke:#1d4ed8,stroke-width:2px,stroke-dasharray: 8 6
-  style SP fill:transparent,stroke:#16a34a,stroke-width:2px,stroke-dasharray: 8 6
-  style BH fill:transparent,stroke:#d97706,stroke-width:2px,stroke-dasharray: 8 6
+  style RJ fill:transparent,stroke:#1d4ed8,stroke-width:2px,stroke-dasharray:5,5
+  style SP fill:transparent,stroke:#16a34a,stroke-width:2px,stroke-dasharray:5,5
+  style BH fill:transparent,stroke:#d97706,stroke-width:2px,stroke-dasharray:5,5
 ```
 
 ---
@@ -675,16 +668,6 @@ show ip ospf neighbor
   - testes realizados;
   - análise dos pacotes OSPF capturados;
   - comparação conceitual entre OSPF e RIP.
-
----
-
-## 18. Referências
-
-- BRITO, Samuel Henrique Bucke. *Laboratórios de Tecnologias Cisco em Infraestrutura de Redes*. 2. ed. São Paulo: Novatec, 2014.
-- LOBATO, Luiz Carlos. *Protocolos de Roteamento IP*. Rio de Janeiro: RNP/ESR, 2013.
-- KUROSE, James F.; ROSS, Keith W. *Redes de Computadores e a Internet: uma abordagem top-down*. 8. ed. Porto Alegre: Pearson/Bookman, 2021.
-- MORAES, Alexandre Fernandes de. *Wireshark: Guia Prático de Análise de Tráfego de Rede*. São Paulo: Novatec, 2015.
-
 ---
 
 [← Anterior: Laboratório 04](lab04.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 06 →](lab06.md)

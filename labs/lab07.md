@@ -316,14 +316,9 @@ Nos provedores, deve aparecer o prefixo da empresa:
 
 - `200.18.245.64/27`
 
-## 9. Referências
-
-- BRITO, Samuel Henrique Bucke. *Laboratórios de Tecnologias Cisco em Infraestrutura de Redes*. 2. ed. São Paulo: Novatec, 2014.
-- LOBATO, Luiz Carlos. *Protocolos de Roteamento IP*. Rio de Janeiro: RNP/ESR, 2013.
-- KUROSE, James F.; ROSS, Keith W. *Redes de Computadores e a Internet: uma abordagem top-down*. 8. ed. Porto Alegre: Pearson/Bookman, 2021.
-
 ---
 
 [← Anterior: Laboratório 06](lab06.md) | [Índice Geral (README)](../README.md) | [Próximo: Laboratório 08 →](lab08.md)
+
 
 

@@ -145,10 +145,13 @@ Os critérios específicos de cada experimento serão informados no respectivo r
 
 ## Bibliografia Complementar
 
-- **KUROSE, James F.; ROSS, Keith W**. Redes de computadores e a Internet: uma abordagem top-down. 6. ed. São Paulo: Pearson, 2013.
-- **TANENBAUM, Andrew S.; WETHERALL, David J.** Redes de computadores. 5. ed. São Paulo: Pearson, 2011.
-- **STALLINGS, William.** Comunicações de dados e redes de computadores. 10. ed. São Paulo: Pearson, 2014.
+- **BRITO, Samuel Henrique Bucke**. Laboratórios de tecnologias Cisco em infraestrutura de redes. 2. ed. São Paulo: Novatec, 2014.
 - **COMER, Douglas E.** Interligação de redes com TCP/IP: princípios, protocolos e arquitetura. 5. ed. Rio de Janeiro: Elsevier, 2006.
+- **KUROSE, James F.; ROSS, Keith W**. Redes de computadores e a Internet: uma abordagem top-down. 8. ed. Porto Alegre: Pearson/Bookman, 2021.
+- **LOBATO, Luiz Carlos**. Protocolos de roteamento IP. Rio de Janeiro: RNP/ESR, 2013.
+- **MORAES, Alexandre Fernandes de**. Wireshark: guia prático de análise de tráfego de rede. São Paulo: Novatec, 2015.
+- **STALLINGS, William.** Comunicações de dados e redes de computadores. 10. ed. São Paulo: Pearson, 2014.
+- **TANENBAUM, Andrew S.; WETHERALL, David J.** Redes de computadores. 5. ed. São Paulo: Pearson, 2011.
 
 ## Documentos Normativos e Técnicos
 - **POSTEL, Jon.** Transmission Control Protocol. RFC 793. Marina del Rey: ISI, 1981.
