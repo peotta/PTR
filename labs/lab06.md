@@ -108,7 +108,7 @@ Outra forma de imaginar é pensar em viagens:
 - **eBGP** é como conversar com pessoas de **outras cidades ou outros países** para saber como chegar até lá
 - **iBGP** é como avisar as pessoas da **sua própria cidade** qual estrada usar para sair dela
 
-<img width="1672" height="941" alt="ChatGPT Image 3 de jun  de 2026, 18_57_06" src="https://github.com/user-attachments/assets/0a70cad5-1634-4ae7-a539-b973ba63046b" />
+<img width="1672" height="941" alt="laboratorio 6 roteamento entre sistemas autonomos" src="https://github.com/user-attachments/assets/a7d2063d-f1ca-4e2b-b2e0-9280a5867965" />
 
 
 
