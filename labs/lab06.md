@@ -449,7 +449,7 @@ Durante a verificação e a análise de pacotes, o aluno deve observar:
 - print do `show ip bgp summary`;
 - print do `show ip bgp`;
 - print do `show ip route`;
-- arquivo de captura do Wireshark (`.pcapng`) contendo o estabelecimento da sessão BGP;
+- print das capturas do Wireshark contendo o estabelecimento da sessão BGP;
 - print do pacote BGP OPEN destacando os campos `My AS` e `BGP Identifier`;
 - print do pacote BGP UPDATE destacando o prefixo anunciado no campo NLRI e seus atributos;
 - relatório curto com:
