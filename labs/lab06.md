@@ -136,7 +136,7 @@ Por isso, o BGP é o protocolo mais importante quando falamos de **Internet, pro
 
 O cenário representa um pequeno trecho do núcleo operacional da Internet, com **três provedores** e **uma empresa** que precisa anunciar o bloco público **`200.18.245.64/27`**.  **BGP** é um protocolo de roteamento **interdomínios**, usado entre **sistemas autônomos (AS)**.
 
-O material informa ainda que:
+Dados do cenário:
 
 - a empresa pertence ao **AS 1000**;
 - o **ISP1** pertence ao **AS 100**;
