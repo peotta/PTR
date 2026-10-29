@@ -394,7 +394,7 @@ O PIM-DM é indicado apenas para cenários didáticos ou redes pequenas com rece
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 ### 7.1 Questões para análise
 

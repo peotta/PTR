@@ -121,7 +121,7 @@ Isso segue a lógica de **negar tudo e liberar somente o necessário**.
 | `/proc/sys/net/ipv4/ip_local_port_range` | Faixa de portas efêmeras | dois números | Útil em troubleshooting de conexões, NAT e aplicações com muitas sessões simultâneas |
 | `/proc/sys/net/ipv4/tcp_fin_timeout` | Tempo de espera para conexões TCP em encerramento | valor numérico | Pode ser ajustado em servidores com grande volume de conexões |
 | `/proc/sys/net/ipv4/tcp_keepalive_time` | Tempo até envio de keepalive TCP | valor numérico | Útil em sessões persistentes, túneis e monitoramento de conexões ociosas |
-| `/proc/sys/net/ipv4/conf/all/secure_redirects` | Aceitação segura de redirects ICMP | `0`, `1` | Relevante em endurecimento de servidores e hosts administrativos |
+| `/proc/sys/net/ipv4/conf/all/secure_redirects` | Aceitação segura de redirects ICMP | `0`, `1` | Relevante em *hardening* de servidores e hosts administrativos |
 
 ### 2.8 Observações rápidas
 
@@ -648,7 +648,7 @@ Recomenda-se, ainda, habilitar `rp_filter` e desabilitar `accept_redirects` e `s
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 ### 7.1 Questões para análise
 

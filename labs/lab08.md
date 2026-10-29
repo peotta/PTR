@@ -511,7 +511,7 @@ A autenticação por *message digest* exige também a chave na interface (`ip os
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 ### 7.1 Questões para análise
 

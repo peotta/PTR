@@ -229,6 +229,12 @@ ping 192.168.20.10
 ip route
 ```
 
+**Host B**
+
+```bash
+ip route
+```
+
 **Roteador**
 
 ```bash
@@ -310,7 +316,7 @@ O parâmetro `rp_filter` pode causar descartes legítimos em cenários de roteam
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 1. No teste inicial, por que o Host A conseguiu alcançar a interface local do roteador (`192.168.10.1`), mas não conseguiu se comunicar com o Host B (`192.168.20.10`)?
 2. Qual a função exata do comando de gateway padrão (`ip route add default via ...`) configurado nos hosts e o que ocorre na ausência dele?
@@ -326,21 +332,23 @@ O parâmetro `rp_filter` pode causar descartes legítimos em cenários de roteam
 | Critério | Pontos |
 |---|---:|
 | Montagem correta da topologia e endereçamento IP das interfaces | 2,0 |
-| Configuração de rotas estáticas / gateway padrão nos hosts | 2,5 |
+| Configuração do roteador (endereçamento e encaminhamento IPv4) e do gateway padrão nos hosts | 2,5 |
 | Execução e validação dos testes de conectividade (`ping`) | 2,0 |
 | Inspeção e interpretação das tabelas de rotas (`ip route`) | 1,5 |
-| Respostas técnicas fundamentadas às questões de análise | 2,0 |
+| Respostas técnicas fundamentadas às questões para análise e discussão e síntese conclusiva | 2,0 |
 
 **Total: 10,0**
 
 ### 8.2 Entregáveis
 
-O aluno deverá enviar relatório técnico contendo:
+O relatório técnico é **individual** e deve ser entregue em **PDF**, contendo:
+
 - captura de tela da topologia montada e ativa no PNetLab;
-- evidência da configuração IP e tabela de rotas (`ip route`) em Host A, Host B e Roteador;
-- evidência dos testes de ping (falha inicial antes do gateway e sucesso após a configuração);
-- respostas completas e fundamentadas às **Questões para análise**;
-- breve relatório síntese com objetivo, comandos utilizados e conclusão.
+- evidência da configuração IP (`ip addr`) e da tabela de rotas (`ip route`) no Host A, no Host B e no Roteador, acompanhada da interpretação dos campos principais conforme a Seção 5.3;
+- evidência do encaminhamento habilitado no Roteador (`sysctl net.ipv4.ip_forward` retornando `1`);
+- evidência dos testes de conectividade: ping do Host A ao roteador (`192.168.10.1`), ping do Host A ao Host B antes do gateway padrão (falha) e após a configuração (sucesso);
+- respostas completas e fundamentadas às questões da Seção 7;
+- síntese conclusiva com objetivo, comandos utilizados e conclusão.
 
 ---
 

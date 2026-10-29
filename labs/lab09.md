@@ -531,7 +531,7 @@ O valor `SENHA-LAB` é exclusivamente didático, e a senha deve ser a mesma nos 
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 ### 7.1 Questões para análise
 

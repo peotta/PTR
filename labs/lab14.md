@@ -519,7 +519,7 @@ Recomenda-se ainda executar o Suricata com usuário sem privilégios após a ini
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 ### 7.1 Questões para análise
 

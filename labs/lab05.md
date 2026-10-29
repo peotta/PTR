@@ -692,7 +692,7 @@ A autenticação por *message digest* (MD5) é prevista na [**RFC 2328**](https:
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 ### 7.1 Comparação orientada entre OSPF e RIP
 

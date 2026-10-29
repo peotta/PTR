@@ -438,7 +438,7 @@ A autenticação criptográfica do RIPv2 é descrita na [**RFC 4822**](https://d
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 ### 7.1 Questões para análise
 

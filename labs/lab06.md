@@ -508,7 +508,7 @@ O comando `ttl-security` deve ser aplicado nos dois extremos da sessão e não p
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 1. Qual é a função do BGP nesse cenário?
 2. Por que a sessão com o ISP1 usa endereço de loopback?

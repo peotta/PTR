@@ -424,7 +424,7 @@ As senhas das sessões (`SENHA`) utilizam a assinatura MD5 do TCP, obsoleta fren
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 1. Por que os provedores ISP1, ISP2 e ISP3 não anunciam suas redes internas de enlace e gerência diretamente para os clientes ou para a Internet pública?
 2. Qual a importância técnica e econômica do estabelecimento de sessões de *Peering* direto entre provedores (ISP1-ISP3 e ISP2-ISP3) para a latência e o tráfego global?

@@ -580,7 +580,7 @@ Os comandos do WAF devem ser aplicados após a conclusão dos testes comparativo
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 ### 7.1 Questões para análise
 

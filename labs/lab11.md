@@ -390,7 +390,7 @@ O ajuste de `nf_conntrack_max` e dos tempos limite (`net.netfilter.nf_conntrack_
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 ### 7.1 Questões para análise
 

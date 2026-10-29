@@ -336,7 +336,7 @@ Recomenda-se ainda desabilitar serviços desnecessários, manter o *banner* de a
 
 ---
 
-## 7. Perguntas para Fixação
+## 7. Questões para Análise e Discussão
 
 ### 7.1 Questões para análise
 
