@@ -22,6 +22,10 @@ table.pagina,.pagina>thead,.pagina>tbody,.pagina>tfoot,.pagina tr,.pagina td{dis
 .topo-cod b{display:block;color:var(--azul);font-size:1.05rem}.topo-cod span{font-size:.8rem;color:var(--suave)}
 .logo-ft-txt{font-weight:700;color:var(--azul);font-size:.8rem;line-height:1.15;border-left:3px solid var(--verde);padding-left:8px}
 .logo-composto{height:34px}
+.temas{list-style:none;padding:0;margin:12px 0;display:grid;gap:6px;counter-reset:t}
+.temas li{display:flex;gap:12px;align-items:baseline;background:var(--painel);border-left:6px solid var(--c);border-radius:0 8px 8px 0;padding:8px 14px;break-inside:avoid}
+.temas li b{min-width:68px;color:var(--c);font-weight:800}
+.temas .desc{display:block;font-size:.85rem;color:#4a5668;margin-top:2px}
 .baixar{display:inline-block;margin-top:14px;padding:8px 16px;border:2px solid #fff;border-radius:8px;color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
 .baixar:hover{background:#fff;color:var(--azul)}
 .labs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin:12px 0}
@@ -85,7 +89,7 @@ ul.labs{list-style:none;padding:0}
 .lg{background:var(--c);color:#fff;font-size:.78rem;padding:3px 10px;border-radius:999px;font-weight:600}
 .crono{border:1px solid var(--linha);border-radius:10px;overflow:hidden}
 .semana{display:grid;grid-template-columns:78px 1fr 1fr;gap:0;border-top:1px solid var(--linha)}
-.semana.cab{background:var(--azul);color:#fff;font-weight:600;font-size:.85rem;border-top:0;position:sticky;top:48px;z-index:2}
+.semana.cab{background:var(--azul);color:#fff;font-weight:600;font-size:.85rem;border-top:0}
 .semana.cab div{padding:9px 12px}
 .sem-n{background:var(--painel);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;font-size:.7rem;color:var(--suave);text-transform:uppercase}
 .sem-n b{font-size:1.2rem;color:var(--azul);line-height:1.1}.sem-n small{text-transform:none}
