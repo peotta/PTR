@@ -159,41 +159,41 @@ Os laboratórios práticos estão organizados de acordo com a progressão temát
 
 | Laboratório | Tema | Roteiro | Podcast |
 |:------------:|------|:-------:|:-------:|
-| **00** | Guia de Comandos Básicos (VPCS e Linux) | [Acessar](./labs/comandos.md) | - |
-| **01** | Fundamentos de Roteamento IP e Encaminhamento de Pacotes | [Acessar](./labs/lab01.md) | - |
-| **02** | Configuração Básica de Roteadores no PNetLab | [Acessar](./labs/lab02.md) | - |
+| **00** | Guia de Comandos Básicos (VPCS e Linux) | [Acessar](https://peotta.github.io/PTR/labs/#/ref/comandos) | - |
+| **01** | Fundamentos de Roteamento IP e Encaminhamento de Pacotes | [Acessar](https://peotta.github.io/PTR/labs/#/lab/01) | - |
+| **02** | Configuração Básica de Roteadores no PNetLab | [Acessar](https://peotta.github.io/PTR/labs/#/lab/02) | - |
 
 ### 9.2 Módulo 1: Roteamento Intra-Domínio (IGP) e Multicast
 
 | Laboratório | Tema | Roteiro | Podcast |
 |:------------:|------|:-------:|:-------:|
-| **03** | Roteamento Multicast: PIM-DM em Topologia Controlada | [Acessar](./labs/lab03.md) | [🎧 Ep. 1](https://open.spotify.com/episode/6autgkF6lifJAD8M3Xr0XR) |
-| **04** | Roteamento com RIPv2 e Análise de Convergência | [Acessar](./labs/lab04.md) | [🎧 Ep. 2](https://open.spotify.com/episode/5My3JBmZoVyoKaOL1MGArI) |
-| **05** | Roteamento Dinâmico com OSPF | [Acessar](./labs/lab05.md) | [🎧 Ep. 4](https://open.spotify.com/episode/6ha3fZPjrfBp8ZQNyIfTps?si=754a105ed6474063) |
+| **03** | Roteamento Multicast: PIM-DM em Topologia Controlada | [Acessar](https://peotta.github.io/PTR/labs/#/lab/03) | [🎧 Ep. 1](https://open.spotify.com/episode/6autgkF6lifJAD8M3Xr0XR) |
+| **04** | Roteamento com RIPv2 e Análise de Convergência | [Acessar](https://peotta.github.io/PTR/labs/#/lab/04) | [🎧 Ep. 2](https://open.spotify.com/episode/5My3JBmZoVyoKaOL1MGArI) |
+| **05** | Roteamento Dinâmico com OSPF | [Acessar](https://peotta.github.io/PTR/labs/#/lab/05) | [🎧 Ep. 4](https://open.spotify.com/episode/6ha3fZPjrfBp8ZQNyIfTps?si=754a105ed6474063) |
 
 ### 9.3 Módulo 2: Roteamento Inter-Domínio (EGP / BGP)
 
 | Laboratório | Tema | Roteiro | Podcast |
 |:------------:|------|:-------:|:-------:|
-| **06** | Roteamento Externo via BGP (eBGP Básico) | [Acessar](./labs/lab06.md) | [🎧 Ep. 5](https://open.spotify.com/episode/5h5COkh8c51req9tUxZhzs?si=20722c87de1b41aa) |
-| **07** | Configuração dos Provedores (BGP Externo e Peering) | [Acessar](./labs/lab07.md) | - |
-| **08** | Políticas de Roteamento BGP e Integração com OSPF | [Acessar](./labs/lab08.md) | - |
+| **06** | Roteamento Externo via BGP (eBGP Básico) | [Acessar](https://peotta.github.io/PTR/labs/#/lab/06) | [🎧 Ep. 5](https://open.spotify.com/episode/5h5COkh8c51req9tUxZhzs?si=20722c87de1b41aa) |
+| **07** | Configuração dos Provedores (BGP Externo e Peering) | [Acessar](https://peotta.github.io/PTR/labs/#/lab/07) | - |
+| **08** | Políticas de Roteamento BGP e Integração com OSPF | [Acessar](https://peotta.github.io/PTR/labs/#/lab/08) | - |
 
 ### 9.4 Módulo 3: Comutação por Rótulos (MPLS)
 
 | Laboratório | Tema | Roteiro | Podcast |
 |:------------:|------|:-------:|:-------:|
-| **09** | Implementação de MPLS e LDP no Backbone | [Acessar](./labs/lab09.md) | [🎧 Ep. 6](https://open.spotify.com/episode/5RXovxuVQ6eLXa5pt2dUeR?si=dZE1TCGAQwyFAuxqumNnyQ) |
+| **09** | Implementação de MPLS e LDP no Backbone | [Acessar](https://peotta.github.io/PTR/labs/#/lab/09) | [🎧 Ep. 6](https://open.spotify.com/episode/5RXovxuVQ6eLXa5pt2dUeR?si=dZE1TCGAQwyFAuxqumNnyQ) |
 
 ### 9.5 Módulo 4: Segurança de Redes e Aplicação
 
 | Laboratório | Tema | Roteiro | Podcast |
 |:------------:|------|:-------:|:-------:|
-| **10** | Firewall de pacotes sem estado (stateless) | [Acessar](./labs/lab10.md) | [🎧 Ep. 7](https://open.spotify.com/episode/6mSMblRBIjOvmX0AgsO1ln?si=ccYN8DnmSEuR6XSJgDvBAA) |
-| **11** | Firewall Stateful com `iptables` e Conntrack | [Acessar](./labs/lab11.md) | - |
-| **12** | Implementação de WAF com ModSecurity e OWASP CRS | [Acessar](./labs/lab12.md) | - |
-| **13** | Testes de Ataques Web e Análise de Logs no WAF | [Acessar](./labs/lab13.md) | - |
-| **14** | Implementação de IDS/IPS com Suricata no PNetLab | [Acessar](./labs/lab14.md) | - |
+| **10** | Firewall de pacotes sem estado (stateless) | [Acessar](https://peotta.github.io/PTR/labs/#/lab/10) | [🎧 Ep. 7](https://open.spotify.com/episode/6mSMblRBIjOvmX0AgsO1ln?si=ccYN8DnmSEuR6XSJgDvBAA) |
+| **11** | Firewall Stateful com `iptables` e Conntrack | [Acessar](https://peotta.github.io/PTR/labs/#/lab/11) | - |
+| **12** | Implementação de WAF com ModSecurity e OWASP CRS | [Acessar](https://peotta.github.io/PTR/labs/#/lab/12) | - |
+| **13** | Testes de Ataques Web e Análise de Logs no WAF | [Acessar](https://peotta.github.io/PTR/labs/#/lab/13) | - |
+| **14** | Implementação de IDS/IPS com Suricata no PNetLab | [Acessar](https://peotta.github.io/PTR/labs/#/lab/14) | - |
 
 ---
 
@@ -201,7 +201,7 @@ Os laboratórios práticos estão organizados de acordo com a progressão temát
 
 | Documento | Descrição | Link |
 |-----------|-----------|:----:|
-| **Comandos de Rede** | Tabela rápida de comandos para VPCS e distribuições Debian/Ubuntu | [Acessar](./labs/comandos.md) |
+| **Comandos de Rede** | Tabela rápida de comandos para VPCS e distribuições Debian/Ubuntu | [Acessar](https://peotta.github.io/PTR/labs/#/ref/comandos) |
 
 ---
 
