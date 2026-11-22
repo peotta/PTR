@@ -1,0 +1,64 @@
+name: Atualizar visualizador dos laboratórios
+
+# Recompila o site de docs/labs/ a cada alteração nos roteiros ou nas imagens.
+# O código do visualizador fica em https://github.com/peotta/lab-viewer.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'labs/**'
+      - 'images/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labs-viewer
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar a disciplina
+        uses: actions/checkout@v4
+        with:
+          path: disciplina
+
+      - name: Baixar o visualizador
+        uses: actions/checkout@v4
+        with:
+          repository: peotta/lab-viewer
+          path: viewer
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: viewer/package-lock.json
+
+      - name: Instalar dependências
+        run: npm ci
+        working-directory: viewer
+
+      - name: Compilar o site
+        run: npm run build
+        working-directory: viewer
+        env:
+          DISCIPLINA_DIR: ${{ github.workspace }}/disciplina
+          LAB_CONFIG: config/ene0025.json
+          LAB_OUT: ${{ github.workspace }}/disciplina/docs/labs
+
+      - name: Publicar em docs/labs
+        working-directory: disciplina
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/labs
+          if git diff --cached --quiet; then
+            echo "Sem alterações no site."
+            exit 0
+          fi
+          git commit -m "Atualiza visualizador dos laboratorios (automatico)"
+          git push
