@@ -147,7 +147,8 @@ footer p{margin:0}
  .nav{display:none}.capa-in{padding:22px 16px 18px}
  main{max-width:none;padding:0}
  section{padding-top:14px}
- h2{break-after:avoid}h3,h4{break-after:avoid}
+ h2,h3,h4{break-after:avoid-page;page-break-after:avoid}
+ section>h2+*,h2+*,h3+*,h4+*{break-before:avoid-page;page-break-before:avoid}
  .semana,.lin,.pe-i,.card,.passo,.quadro,details{break-inside:avoid}
  .modulo.longo{break-inside:auto}
  .semana.cab{position:static}
